@@ -1,0 +1,10 @@
+# ADD
+DOMAIN,waapdg.jd.com
+DOMAIN-SUFFIX,jddebug.com
+DOMAIN,https.0.66.168.192.in-addr.arpa
+# REMOVE
+# DOMAIN-SUFFIX,minor-api-os.hoyoverse.com
+# DOMAIN-SUFFIX,log-upload-os.hoyoverse.com
+# DOMAIN-SUFFIX,hkrpg-log-upload-os.hoyoverse.com
+DOMAIN-SUFFIX,grpc.biliapi.net
+DOMAIN-SUFFIX,dataflow.biliapi.com
