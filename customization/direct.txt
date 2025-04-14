@@ -1,4 +1,12 @@
 # ADD
+DOMAIN-SUFFIX,lan
+DOMAIN-SUFFIX,localdomain
+DOMAIN-SUFFIX,example
+DOMAIN-SUFFIX,invalid
+DOMAIN-SUFFIX,localhost
+DOMAIN-SUFFIX,test
+DOMAIN-SUFFIX,local
+DOMAIN-SUFFIX,home.arpa
 DOMAIN-SUFFIX,freebsd.org
 DOMAIN-SUFFIX,syncthing.net
 DOMAIN-SUFFIX,calibre-ebook.com
