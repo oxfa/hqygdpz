@@ -134,7 +134,7 @@ jobs:
                                                             $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple.txt \
                                                             > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/apple.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple.txt > $GITHUB_WORKSPACE/release/ruleset/sr/apple.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple.txt > $GITHUB_WORKSPACE/release/sr/rule-set/apple.txt
           # python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sr/sgmodule/rule/apple.sgmodule RULE DIRECT
 
       - name: Process High Priority Rules
@@ -142,22 +142,22 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt $GITHUB_WORKSPACE/customization/high_priority_direct.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_direct.yaml $GITHUB_WORKSPACE/customization/high_priority_direct.txt
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_direct.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_direct.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_direct.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_proxy.yaml $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_proxy.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_proxy.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_proxy.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt $GITHUB_WORKSPACE/customization/high_priority_warp1.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp1.yaml $GITHUB_WORKSPACE/customization/high_priority_warp1.txt
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp1.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_warp1.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp1.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt $GITHUB_WORKSPACE/customization/high_priority_warp2.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_domains $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp2.yaml $GITHUB_WORKSPACE/customization/high_priority_warp2.txt
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp2.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt > $GITHUB_WORKSPACE/release/ruleset/sr/high_priority_warp2.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp2.txt
 
       - name: Process Warp Rules
         run: |
@@ -167,7 +167,7 @@ jobs:
                                                            $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/warp.txt \
                                                            > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/warp.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/warp.txt > $GITHUB_WORKSPACE/release/ruleset/sr/warp.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/warp.txt > $GITHUB_WORKSPACE/release/sr/rule-set/warp.txt
 
       - name: Process Direct Rules
         run: |
@@ -177,7 +177,7 @@ jobs:
                                                              $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/direct.txt \
                                                              > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/direct.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/direct.txt > $GITHUB_WORKSPACE/release/ruleset/sr/direct.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/direct.txt > $GITHUB_WORKSPACE/release/sr/rule-set/direct.txt
 
 
       - name: Process Proxy Rules
@@ -190,7 +190,7 @@ jobs:
                                                             $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/proxy.txt \
                                                             > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/proxy.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/proxy.txt > $GITHUB_WORKSPACE/release/ruleset/sr/proxy.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/proxy.txt > $GITHUB_WORKSPACE/release/sr/rule-set/proxy.txt
 
       - name: Process Block Rules
         run: |
@@ -205,7 +205,7 @@ jobs:
                                                             $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/block.txt \
                                                             > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/block.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/block.txt > $GITHUB_WORKSPACE/release/ruleset/sr/block.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/block.txt > $GITHUB_WORKSPACE/release/sr/rule-set/block.txt
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sr/sgmodule/rule/block_reject_dict.sgmodule RULE REJECT-DICT
           python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sr/sgmodule/rule/block_reject_array.sgmodule RULE REJECT-ARRAY
 
