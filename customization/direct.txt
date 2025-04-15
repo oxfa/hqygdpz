@@ -12,4 +12,11 @@ DOMAIN-SUFFIX,syncthing.net
 DOMAIN-SUFFIX,calibre-ebook.com
 DOMAIN-SUFFIX,documentfoundation.org
 # REMOVE
+DOMAIN-KEYWORD,stripe
+DOMAIN-KEYWORD,beplay
+DOMAIN-KEYWORD,hnagroup
+DOMAIN-KEYWORD,officecdn
+DOMAIN-KEYWORD,.tmall.com
 DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,larkofficecdn.com
+DOMAIN-SUFFIX,officecdn.microsoft.com
