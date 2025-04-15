@@ -1,4 +1,5 @@
 # ADD
+DOMAIN-SUFFIX,eu.org
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,icloud.com
