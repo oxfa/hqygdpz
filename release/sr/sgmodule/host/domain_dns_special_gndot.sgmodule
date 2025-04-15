@@ -1,6 +1,7 @@
 #!name=domain_dns_special_gndot
 
 [Host]
+*.eu.org = server:tls://223.5.5.5
 *.apple.com = server:tls://223.5.5.5
 *.apple.com.cn = server:tls://223.5.5.5
 *.icloud.com = server:tls://223.5.5.5
