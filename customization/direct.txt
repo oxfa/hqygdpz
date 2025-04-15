@@ -17,6 +17,7 @@ DOMAIN-KEYWORD,beplay
 DOMAIN-KEYWORD,hnagroup
 DOMAIN-KEYWORD,officecdn
 DOMAIN-KEYWORD,.tmall.com
+DOMAIN-SUFFIX,wang
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,larkofficecdn.com
 DOMAIN-SUFFIX,officecdn.microsoft.com
