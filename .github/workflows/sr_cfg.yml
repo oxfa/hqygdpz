@@ -13,6 +13,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build_cfg:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     defaults:
       run:
