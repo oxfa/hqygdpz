@@ -1,0 +1,56 @@
+## The Comment Should Use ##
+# ADD
+## Apple domains
+DOMAIN,ocsp.digicert.com
+DOMAIN,crl3.digicert.com
+DOMAIN,crl4.digicert.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN,apple-relay.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,ohttp-relay1.fastly-edge.com
+DOMAIN,appldnld.apple.com.edgesuite.net
+DOMAIN-SUFFIX,apple
+DOMAIN-SUFFIX,apple.cn
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,mac.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,applemusic.com
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-livephotoskit.com
+DOMAIN-SUFFIX,apzones.com
+DOMAIN-SUFFIX,akadns.net
+DOMAIN-SUFFIX,akamai.net
+DOMAIN-SUFFIX,akamaiedge.net
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,edgekey.net
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN,time.edu.cn
+DOMAIN,ntp.org.cn
+DOMAIN,pool.ntp.org
+## Syncthing and its stun server
+DOMAIN-SUFFIX,syncthing.net
+DOMAIN,stun.callwithus.com
+DOMAIN,stun.counterpath.com
+DOMAIN,stun.counterpath.net
+DOMAIN,stun.ekiga.net
+DOMAIN,stun.ideasip.com
+DOMAIN,stun.internetcalls.com
+DOMAIN,stun.schlund.de
+DOMAIN,stun.sipgate.net
+DOMAIN,stun.voip.aebc.com
+DOMAIN,stun.voiparound.com
+DOMAIN,stun.voipbuster.com
+DOMAIN,stun.voipstunt.com
+DOMAIN,stun.voxgratia.org
+DOMAIN,stun.xten.com
+# REMOVE

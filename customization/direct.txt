@@ -1,0 +1,70 @@
+## The Comment Should Use ##
+# ADD
+## alibaba
+DOMAIN-SUFFIX,mmstat.com
+## qualcomm domains
+DOMAIN,path1.xtracloud.net
+DOMAIN,path2.xtracloud.net
+DOMAIN,path3.xtracloud.net
+## lan domains
+DOMAIN-SUFFIX,lan
+DOMAIN-SUFFIX,localdomain
+DOMAIN-SUFFIX,example
+DOMAIN-SUFFIX,invalid
+DOMAIN-SUFFIX,localhost
+DOMAIN-SUFFIX,test
+DOMAIN-SUFFIX,local
+DOMAIN-SUFFIX,home.arpa
+## Domains of syncthing and its stun server
+DOMAIN-SUFFIX,syncthing.net
+DOMAIN,stun.callwithus.com
+DOMAIN,stun.counterpath.com
+DOMAIN,stun.counterpath.net
+DOMAIN,stun.ekiga.net
+DOMAIN,stun.ideasip.com
+DOMAIN,stun.internetcalls.com
+DOMAIN,stun.schlund.de
+DOMAIN,stun.sipgate.net
+DOMAIN,stun.voip.aebc.com
+DOMAIN,stun.voiparound.com
+DOMAIN,stun.voipbuster.com
+DOMAIN,stun.voipstunt.com
+DOMAIN,stun.voxgratia.org
+DOMAIN,stun.xten.com
+## steam
+DOMAIN-SUFFIX,s.team
+DOMAIN-SUFFIX,steam.tv
+DOMAIN-SUFFIX,valvesoftware.com
+DOMAIN-SUFFIX,steamchina.com
+DOMAIN-SUFFIX,steampowered.com
+DOMAIN-SUFFIX,steamstatic.com
+DOMAIN-SUFFIX,steamserver.net
+DOMAIN-SUFFIX,steamcontent.com
+DOMAIN-SUFFIX,steamusercontent.com
+DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
+DOMAIN-SUFFIX,steamvideo-a.akamaihd.net
+DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net
+DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net
+DOMAIN-SUFFIX,steammobile.akamaized.net
+DOMAIN-SUFFIX,steambroadcast.akamaized.net
+DOMAIN-SUFFIX,steampipe.akamaized.net
+DOMAIN-SUFFIX,steampipe-partner.akamaized.net
+## 2k game
+DOMAIN-SUFFIX,2k.com
+DOMAIN-SUFFIX,2kct.onl
+DOMAIN-SUFFIX,firaxislive.com
+DOMAIN-SUFFIX,civilization.com
+DOMAIN-SUFFIX,2kcoretech.online
+## other (Unknown)
+### oneplus
+DOMAIN-SUFFIX,allsaints.top
+# REMOVE
+DOMAIN-KEYWORD,google
+DOMAIN-KEYWORD,microsoft
+DOMAIN-SUFFIX,ms
+DOMAIN-SUFFIX,wang
+DOMAIN-SUFFIX,oracle.com
+DOMAIN-SUFFIX,office.net
+DOMAIN-SUFFIX,r.bing.com
+DOMAIN-SUFFIX,th.bing.com
+DOMAIN-SUFFIX,windowsphone.com

@@ -1,0 +1,56 @@
+## The Comment Should Use ##
+# ADD
+## alibaba
+DOMAIN-SUFFIX,px.ucweb.com
+DOMAIN-SUFFIX,applog-perf.uc.cn
+DOMAIN-SUFFIX,adashbc.ut.taobao.com
+DOMAIN-SUFFIX,mum.alibabachengdun.com
+## apple
+DOMAIN-SUFFIX,iadsdk.apple.com
+## bilibili
+DOMAIN,httpdns.bilivideo.com
+DOMAIN-SUFFIX,dataflow.biliapi.com
+## baidu
+DOMAIN-SUFFIX,dlswbr.baidu.com
+DOMAIN-SUFFIX,cstm.baidu.com
+## jd
+DOMAIN-SUFFIX,mars.jd.com
+DOMAIN-SUFFIX,uranus.jd.com
+DOMAIN-SUFFIX,blackhole.m.jd.com
+## jpush
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,jpush.io
+## smzdm
+DOMAIN-SUFFIX,analytics-api.smzdm.com
+## taptap
+DOMAIN,ap-bigdata-bj.cn-beijing.log.aliyuncs.com
+DOMAIN,ap-snow.cn-beijing.dualstack.log.aliyuncs.com
+DOMAIN,ap-client-logs-bj.cn-beijing.dualstack.log.aliyuncs.com
+## tencent
+DOMAIN-SUFFIX,wxs.qq.com
+DOMAIN-SUFFIX,trace.qq.com
+DOMAIN-SUFFIX,bugly.qq.com
+DOMAIN-SUFFIX,e.qq.com
+DOMAIN-SUFFIX,mazu.m.qq.com
+## xiaomi
+DOMAIN-SUFFIX,ad.mi.com
+DOMAIN-SUFFIX,ad.xiaomi.com
+DOMAIN-SUFFIX,ad1.xiaomi.com
+DOMAIN-SUFFIX,ad.intl.xiaomi.com
+DOMAIN-SUFFIX,tracking.miui.com
+DOMAIN-SUFFIX,tracking.intl.miui.com
+## netease
+DOMAIN,httpdns.music.163.com
+## sohu
+DOMAIN-SUFFIX,go.sohu.com
+DOMAIN-SUFFIX,track.sohu.com
+DOMAIN-SUFFIX,reke.at.sohu.com
+## umeng
+DOMAIN-SUFFIX,umeng.com
+DOMAIN-SUFFIX,umengcloud.com
+## other
+DOMAIN-SUFFIX,volceapplog.com
+DOMAIN-SUFFIX,cdp.cloud.unity3d.com
+DOMAIN-SUFFIX,analytics.oceanengine.com
+DOMAIN-SUFFIX,browser-intake-datadoghq.com
+# REMOVE

@@ -1,0 +1,5 @@
+## The Comment Should Use ##
+# ADD
+DOMAIN-SUFFIX,nic.eu.org
+# REMOVE
+DOMAIN-SUFFIX,eu.org

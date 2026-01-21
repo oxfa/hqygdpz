@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "zhipuaishengchan.datasink.sensorsdata.cn"
+      ]
+    }
+  ],
+  "version": 3
+}

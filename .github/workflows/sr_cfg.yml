@@ -1,0 +1,352 @@
+name: Generate Configuraion File
+
+# Controls when the workflow will run
+on:
+  schedule:
+    - cron: '0 23 */3 * *'
+  push:
+    branches:
+      - main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build_cfg:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    env:
+      GDOT_IPV4: tls://8.8.4.4
+      GDOT_IPV6: tls://2001:4860:4860::8888
+      GDOH_IPV4: https://8.8.8.8/dns-query
+      GDOH_IPV6: https://[2001:4860:4860::8888]/dns-query
+      CDOT_IPV4: tls://1.0.0.1
+      CDOH_IPV4: https://1.1.1.1/dns-query
+      CDOH_IPV6: https://[2606:4700:4700::1001]/dns-query
+      # AL
+      CDOT_IPV6_1: tls://2606:4700:4700::1001
+      CDOT_IPV6_2: tls://2606:4700:4700::1111
+      CDOT_IPV6_3: tls://2606:4700:4700::1112
+      ADOT_IPV4: tls://223.5.5.5
+      ADNS_IPV4: 223.5.5.5
+
+      # BLOCK RULES
+      # ADGUARD_DNS_REJECT_URL:             https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+      # DANPOLLOCK_REJECT_URL:              https://someonewhocares.org/hosts/hosts
+      # RAW_LIST_BLOCK_LIST_URL:            https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
+      # PETERLOWE_REJECT_URL:               https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext
+      # RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AdvertisingLite/AdvertisingLite.list
+      # RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Advertising/Advertising.list
+
+      RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/anti-ad-surge.txt
+      RAW_RULESET_BLOCKHTTPDNS_URL:       https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
+      # RAW_RULESET_ASN_DROP_URL:           https://www.spamhaus.org/drop/asndrop.json
+      RAW_RULESET_IPV4_DROP_URL:          https://www.spamhaus.org/drop/drop_v4.json
+      RAW_RULESET_IPV6_DROP_URL:          https://www.spamhaus.org/drop/drop_v6.json
+
+      # PROXY RULES
+      RAW_RULESET_PROXY_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ProxyLite/ProxyLite.list
+
+      # DIRECT RULES
+      # RAW_RULESET_DIRECT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
+      RAW_RULESET_GOOGLE_CHINA_URL:       https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/refs/heads/master/google.china.conf
+      RAW_RULESET_LAN_URL:                https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan.list
+      RAW_LIST_DIRECT_IP_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_IP.txt
+      RAW_RULESET_DIRECT_IP_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs.list
+      RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/direct.txt
+
+      # APPLE RULES
+      RAW_RULESET_APPLE_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
+      RAW_RULESET_APPLEDAILY_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleDaily/AppleDaily.list
+      RAW_RULESET_APPLEDEV_URL:           https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleDev/AppleDev.list
+      RAW_RULESET_APPLEFIRMWARE_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleFirmware/AppleFirmware.list
+      RAW_RULESET_APPLEHARDWARE_URL:      https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleHardware/AppleHardware.list
+      RAW_RULESET_APPLEID_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleID/AppleID.list
+      RAW_RULESET_APPLEMAIL_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMail/AppleMail.list
+      RAW_RULESET_APPLEMEDIA_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMedia/AppleMedia.list
+      RAW_RULESET_APPLENEWS_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleNews/AppleNews.list
+      RAW_RULESET_APPLEPROXY_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleProxy/AppleProxy.list
+      RAW_RULESET_APPLETV_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleTV/AppleTV.list
+      RAW_RULESET_ICLOUD_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/iCloud/iCloud.list
+      RAW_RULESET_SIRI_URL:               https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Siri/Siri.list
+      RAW_RULESET_ICLOUDPRIVATERELAY_URL: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/iCloudPrivateRelay/iCloudPrivateRelay.list
+
+      # WARP RULES
+      RAW_RULESET_ORACLE_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Oracle/Oracle.list
+      RAW_RULESET_OPENAI_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.list
+      RAW_RULESET_REDDIT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Reddit/Reddit.list
+      RAW_RULESET_GITHUB_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
+      RAW_RULESET_PAYPAL_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PayPal/PayPal.list
+      RAW_RULESET_GOOGLE_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list
+      RAW_RULESET_GEMINI_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.list
+      RAW_RULESET_YOUTUBE_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list
+      RAW_RULESET_COPILOT_URL:            https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot.list
+      RAW_RULESET_FACEBOOK_URL:           https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Facebook/Facebook.list
+      RAW_RULESET_MICROSOFT_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
+      RAW_RULESET_CLOUDFLARE_URL:         https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Cloudflare/Cloudflare.list
+
+    steps:
+      - name: Checkout the "master" branch of this repo
+        uses: actions/checkout@v6
+
+      - name: Set variables
+        run: |
+          echo "RELEASE_NAME=Updated on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+
+      - name: Install python3-netaddr
+        run: |
+          sudo apt install python3-netaddr -y
+
+      - name: Create temp folder
+        run: |
+          rm -rf $GITHUB_WORKSPACE/tmp && mkdir -p $GITHUB_WORKSPACE/tmp
+
+      - name: Setup SB
+        run: |
+          curl -L -s https://api.github.com/repos/SagerNet/sing-box/releases/latest \
+            | grep "browser_download_url.*linux_amd64.deb" \
+            | cut -d '"' -f 4 \
+            | xargs -n1 curl -L -o $GITHUB_WORKSPACE/tmp/sb.deb
+          sudo dpkg -i $GITHUB_WORKSPACE/tmp/sb.deb
+
+      - name: Download and Process ASN File
+        run: |
+          mkdir $GITHUB_WORKSPACE/tmp/asn
+          curl -L "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN-CSV&license_key=${{ secrets.MAXMIND_KEY }}&suffix=zip" -o $GITHUB_WORKSPACE/tmp/asn/asn.zip
+          unzip -j $GITHUB_WORKSPACE/tmp/asn/asn.zip -d $GITHUB_WORKSPACE/tmp/asn/
+          python3 $GITHUB_WORKSPACE/script/asn_csv_to_json.py \
+            --input_asn_files $GITHUB_WORKSPACE/tmp/asn/GeoLite2-ASN-Blocks-IPv4.csv,$GITHUB_WORKSPACE/tmp/asn/GeoLite2-ASN-Blocks-IPv6.csv \
+            --output_asn_json $GITHUB_WORKSPACE/tmp/asn/asn.json
+
+      - name: Download & Create Rule Files
+        run: |
+          # Download Direct Rules
+          curl -L ${{ env.RAW_RULESET_GOOGLE_CHINA_URL }} | sed -E -e '/^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/server=\/(.+)\/.+/DOMAIN,\1/g' | sed '1i\# REMOVE'> $GITHUB_WORKSPACE/tmp/google_direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GOOGLE_CHINA_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_LIST_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ip_list.txt || (echo "Download ${{ env.RAW_LIST_DIRECT_IP_URL }} Failed!" && exit 1)
+          touch $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          curl -L ${{ env.RAW_RULESET_LAN_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_LAN_URL }} Failed!" && exit 1)
+          ## Using RAW_LIST_DIRECT_IP_URL currently
+          ## curl -L ${{ env.RAW_RULESET_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_IP_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
+          # Download Proxy Rules
+          touch $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
+          curl -L ${{ env.RAW_RULESET_PROXY_URL }} >> $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PROXY_URL }} Failed!" && exit 1)
+          # Download Block Rules
+          touch $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
+          curl -L ${{ env.RAW_RULESET_IPV4_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV4_DROP_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_IPV6_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR6,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV6_DROP_URL }} Failed!" && exit 1)
+          touch $GITHUB_WORKSPACE/tmp/block_ruleset.txt
+          curl -L ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
+          # Download Warp Rules
+          touch $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
+          curl -L ${{ env.RAW_RULESET_ORACLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ORACLE_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_OPENAI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_OPENAI_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_REDDIT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_REDDIT_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_GITHUB_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GITHUB_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_PAYPAL_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PAYPAL_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_GOOGLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GOOGLE_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_GEMINI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GEMINI_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_YOUTUBE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_YOUTUBE_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_COPILOT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_COPILOT_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_FACEBOOK_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_FACEBOOK_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_MICROSOFT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_MICROSOFT_URL }} Failed!" && exit 1)
+          curl -L ${{ env.RAW_RULESET_CLOUDFLARE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_CLOUDFLARE_URL }} Failed!" && exit 1)
+          # Download Apple Rules
+          touch $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
+          # curl -L ${{ env.RAW_RULESET_APPLE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLE_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEDAILY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDAILY_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEDEV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDEV_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEFIRMWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEFIRMWARE_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEHARDWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEHARDWARE_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEID_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEID_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEMAIL_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEMAIL_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEMEDIA_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEMEDIA_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLENEWS_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLENEWS_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLEPROXY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEPROXY_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_APPLETV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLETV_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_ICLOUD_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ICLOUD_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_ICLOUDPRIVATERELAY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ICLOUDPRIVATERELAY_URL }} Failed!" && exit 1)
+          # curl -L ${{ env.RAW_RULESET_SIRI_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_SIRI_URL }} Failed!" && exit 1)
+
+      - name: Process Apple Rules
+        run: |
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/apple_ruleset.txt -p $GITHUB_WORKSPACE/customization/apple.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
+          cat $GITHUB_WORKSPACE/tmp/apple_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/apple.yaml \
+                                                            $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple.txt \
+                                                            > /dev/null
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/apple.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple.txt > $GITHUB_WORKSPACE/release/sr/rule-set/apple.txt
+
+      - name: Process High Priority Rules
+        run: |
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt -p $GITHUB_WORKSPACE/customization/high_priority_direct.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_direct.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_direct.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt -p $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_proxy.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_proxy.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt -p $GITHUB_WORKSPACE/customization/high_priority_warp1.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp1.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp1.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt -p $GITHUB_WORKSPACE/customization/high_priority_warp2.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp2.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp2.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt -p $GITHUB_WORKSPACE/customization/high_priority_warp3.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp3.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp3.txt
+
+      - name: Process Warp Rules
+        run: |
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_redundancy -i $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/warp_ruleset.txt -p $GITHUB_WORKSPACE/customization/warp.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
+          cat $GITHUB_WORKSPACE/tmp/warp_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/warp.yaml \
+                                                           $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/warp.txt \
+                                                           > /dev/null
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/warp.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/warp.txt > $GITHUB_WORKSPACE/release/sr/rule-set/warp.txt
+
+      - name: Process Direct Rules
+        run: |
+          # remove google china domains from direct ruleset
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/tmp/google_direct_ruleset.txt
+          # process direct ip list
+          python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py $GITHUB_WORKSPACE/tmp/direct_ip_list.txt | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          # process direct ruleset
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_redundancy -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          # remove apple domains from direct rules
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_from_adding_list -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/apple.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/direct.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/direct.yaml \
+                                                             $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/direct.txt \
+                                                             > /dev/null
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/direct.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/direct.txt > $GITHUB_WORKSPACE/release/sr/rule-set/direct.txt
+
+
+      - name: Process Proxy Rules
+        run: |
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_redundancy -i $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_from_adding_list -i $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt -p $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_from_adding_list -i $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt -p $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt -p $GITHUB_WORKSPACE/customization/proxy.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
+          cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/proxy.yaml \
+                                                            $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/proxy.txt \
+                                                            > /dev/null
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/proxy.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/proxy.txt > $GITHUB_WORKSPACE/release/sr/rule-set/proxy.txt
+
+      - name: Process Block Rules
+        run: |
+          # cat $GITHUB_WORKSPACE/tmp/adguard_dns_list.txt | perl -ne '/^\|\|([-_0-9a-zA-Z]+(\.[-_0-9a-zA-Z]+){1,64})\^$/ && print "$1\n"' | perl -ne 'print if not /^[0-9]{1,3}(\.[0-9]{1,3}){3}$/' | \
+          #     tee $GITHUB_WORKSPACE/tmp/block_list.txt > /dev/null
+          # python3 $GITHUB_WORKSPACE/script/list2ruleset.py $GITHUB_WORKSPACE/tmp/block_list.txt -o $GITHUB_WORKSPACE/tmp/block_ruleset.txt
+          # sed -E -i -e 's/\{"asn":([0-9]+),.+/IP-ASN,\1/g' -e '/^IP-ASN/!d' $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_redundancy -i $GITHUB_WORKSPACE/tmp/block_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_redundancy -i $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt -p $GITHUB_WORKSPACE/customization/block_drop.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/block_ruleset.txt -p $GITHUB_WORKSPACE/customization/block.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_from_adding_list -i $GITHUB_WORKSPACE/tmp/block_ruleset.txt -p $GITHUB_WORKSPACE/customization/block_drop.txt
+
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/block_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
+
+          cat $GITHUB_WORKSPACE/tmp/block_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/block.yaml \
+                                                            $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/block.txt \
+                                                            > /dev/null
+          cat $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/block_drop.yaml \
+                                                                 $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/block_drop.txt \
+                                                                 > /dev/null
+
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/block.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/block.txt > $GITHUB_WORKSPACE/release/sr/rule-set/block.txt
+
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/block_drop.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' -e 's/IP-CIDR6/IP-CIDR/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/block_drop.txt > $GITHUB_WORKSPACE/release/sr/rule-set/block_drop.txt
+
+      - name: Process SR Domain-DNS Rules
+        run: |
+          echo "" > $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_special_gndot.sgmodule
+          echo "" > $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_special_gwdot.sgmodule
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_special_gndot.sgmodule -p $GITHUB_WORKSPACE/customization/domain_dns_special_gndot.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_special_gwdot.sgmodule -p $GITHUB_WORKSPACE/customization/domain_dns_special_gwdot.txt
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_special_gndot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.ADOT_IPV4 }}
+          python3 $GITHUB_WORKSPACE/script/gen_sr_mod.py $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_special_gwdot.sgmodule HOST DOMAIN-DNS --optional_val ${{ env.CDOT_IPV6_1 }}
+
+          sed -e '1i\#!name=domain_dns_direct_system' \
+              -e '1e cat $GITHUB_WORKSPACE/customization/sr_override_dns.txt' \
+              -e '1i\[Host]' \
+              -e '/^IP-\|^DOMAIN-KEYWORD\|^PROCESS-NAME/d' \
+              -e 's/DOMAIN,\([^,]*\)/\1 = server:system/' \
+              -e 's/DOMAIN-SUFFIX,\([^,]*\)/*.\1 = server:system/' \
+              $GITHUB_WORKSPACE/tmp/direct_ruleset.txt > $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_direct_system.sgmodule
+
+          sed -e '1i\#!name=domain_dns_direct_gndot' \
+              -e '1e cat $GITHUB_WORKSPACE/customization/sr_override_dns.txt' \
+              -e '1i\[Host]' \
+              -e '/^IP-\|^DOMAIN-KEYWORD\|^PROCESS-NAME/d' \
+              -e "s/DOMAIN,\([^,]*\)/\1 = server:tls:\/\/223.5.5.5/" \
+              -e "s/DOMAIN-SUFFIX,\([^,]*\)/*.\1 = server:tls:\/\/223.5.5.5/" \
+              $GITHUB_WORKSPACE/tmp/direct_ruleset.txt > $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_direct_gndot.sgmodule
+
+      - name: Process SB Ruleset
+        run: |
+          for file in $(ls $GITHUB_WORKSPACE/release/mhm/rule-provider/txt); do \
+            python3 $GITHUB_WORKSPACE/script/ruleset_to_sbruleset.py \
+              --input  $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/${file} \
+              --output $GITHUB_WORKSPACE/release/sb/json/${file%.txt}.json \
+              --asn_json $GITHUB_WORKSPACE/tmp/asn/asn.json; \
+            sing-box rule-set compile --output $GITHUB_WORKSPACE/release/sb/srs/${file%.txt}.srs $GITHUB_WORKSPACE/release/sb/json/${file%.txt}.json
+          done
+
+      - name: Clean temp directory
+        run: rm -rf $GITHUB_WORKSPACE/tmp
+
+      # - name: Release and upload assets
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     name: ${{ env.RELEASE_NAME }}
+      #     tag_name: ${{ env.TAG_NAME }}
+      #     draft: false
+      #     prerelease: false
+      #     files: |
+      #       $GITHUB_WORKSPACE/release/sr_ark.conf
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit if has changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git commit -m "Updated on $(date +%Y%m%d%H%M)"
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

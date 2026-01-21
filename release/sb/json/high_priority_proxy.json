@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "nic.eu.org"
+      ],
+      "domain_suffix": [
+        ".debian.org",
+        ".momot.rs",
+        ".libgen.li",
+        ".ipqualityscore.com",
+        ".booksdl.lc"
+      ]
+    }
+  ],
+  "version": 3
+}

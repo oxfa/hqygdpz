@@ -1,0 +1,17 @@
+## The Comment Should Use ##
+# ADD
+## 2k game
+DOMAIN,telemetryk.api.2kcoretech.online
+DOMAIN,telemetryk.prod1-telemetry-prod.2kct.onl
+## blizzard
+DOMAIN,telemetry-in.battle.net
+## duckduckgo
+DOMAIN,improving.duckduckgo.com
+## mozilla (firefox)
+DOMAIN,incoming.telemetry.mozilla.org
+## Unknown
+DOMAIN-SUFFIX,shpqfreason.bond
+# REMOVE
+DOMAIN,dns.weixin.qq.com
+DOMAIN,dns.weixin.qq.com.cn
+DOMAIN-SUFFIX,amdc.alipay.com
