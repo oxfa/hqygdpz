@@ -6,16 +6,7 @@ DOMAIN-SUFFIX,mmstat.com
 DOMAIN,path1.xtracloud.net
 DOMAIN,path2.xtracloud.net
 DOMAIN,path3.xtracloud.net
-## lan domains
-DOMAIN-SUFFIX,lan
-DOMAIN-SUFFIX,localdomain
-DOMAIN-SUFFIX,example
-DOMAIN-SUFFIX,invalid
-DOMAIN-SUFFIX,localhost
-DOMAIN-SUFFIX,test
-DOMAIN-SUFFIX,local
-DOMAIN-SUFFIX,home.arpa
-## Domains of syncthing and its stun server
+## syncthing's stun servers
 DOMAIN-SUFFIX,syncthing.net
 DOMAIN,stun.callwithus.com
 DOMAIN,stun.counterpath.com

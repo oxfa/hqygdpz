@@ -8,13 +8,22 @@ def sort_lines_by_key_values(file_path, key_value_pairs):
         with open(file_path, "r") as file:
             lines = file.readlines()
             lines = [line.rstrip("\n") for line in lines if (not line.startswith("#")) and (not line.startswith("PROCESS-NAME,")) ]
-            unique_lines = list(set(lines))
+            # Remove duplicates while preserving order
+            unique_lines = list(dict.fromkeys(lines))
             default_index = len(key_value_pairs)
-            sorted_lines = sorted(
-                unique_lines,
-                key=lambda line: list(key_value_pairs.keys()).index(line.split(",")[0].strip())
-                    if line.split(",")[0].strip() in key_value_pairs else default_index
+            # Create indexed list
+            indexed_lines = list(enumerate(unique_lines))
+            # Sort by group index, then lexicographically by the line
+            sorted_indexed = sorted(
+                indexed_lines,
+                key=lambda x: (
+                    list(key_value_pairs.keys()).index(x[1].split(",")[0].strip())
+                    if x[1].split(",")[0].strip() in key_value_pairs
+                    else default_index,
+                    x[1]
+                )
             )
+            sorted_lines = [line for idx, line in sorted_indexed]
 
             sorted_lines = [line + "\n" for line in sorted_lines]
 
