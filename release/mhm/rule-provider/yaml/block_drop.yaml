@@ -299,6 +299,7 @@ payload:
   - IP-CIDR,153.93.0.0/16,no-resolve
   - IP-CIDR,154.209.190.0/24,no-resolve
   - IP-CIDR,154.211.12.0/24,no-resolve
+  - IP-CIDR,154.213.160.0/21,no-resolve
   - IP-CIDR,154.216.188.0/24,no-resolve
   - IP-CIDR,154.43.61.0/24,no-resolve
   - IP-CIDR,154.85.48.0/21,no-resolve
@@ -320,6 +321,7 @@ payload:
   - IP-CIDR,157.162.0.0/16,no-resolve
   - IP-CIDR,157.186.0.0/16,no-resolve
   - IP-CIDR,157.20.182.0/23,no-resolve
+  - IP-CIDR,158.173.51.0/24,no-resolve
   - IP-CIDR,158.249.0.0/16,no-resolve
   - IP-CIDR,158.94.208.0/22,no-resolve
   - IP-CIDR,159.219.0.0/16,no-resolve
@@ -823,6 +825,7 @@ payload:
   - IP-CIDR,202.40.64.0/18,no-resolve
   - IP-CIDR,202.46.96.0/20,no-resolve
   - IP-CIDR,202.52.38.0/24,no-resolve
+  - IP-CIDR,202.59.234.0/23,no-resolve
   - IP-CIDR,202.61.141.0/24,no-resolve
   - IP-CIDR,202.61.144.0/20,no-resolve
   - IP-CIDR,202.79.173.0/24,no-resolve
@@ -1045,6 +1048,7 @@ payload:
   - IP-CIDR,209.186.236.0/24,no-resolve
   - IP-CIDR,209.186.24.0/21,no-resolve
   - IP-CIDR,209.233.156.0/22,no-resolve
+  - IP-CIDR,209.50.160.0/19,no-resolve
   - IP-CIDR,209.63.8.0/21,no-resolve
   - IP-CIDR,209.66.0.0/18,no-resolve
   - IP-CIDR,209.66.128.0/19,no-resolve
@@ -1064,6 +1068,7 @@ payload:
   - IP-CIDR,216.179.128.0/17,no-resolve
   - IP-CIDR,216.240.96.0/20,no-resolve
   - IP-CIDR,216.250.16.0/20,no-resolve
+  - IP-CIDR,216.26.224.0/19,no-resolve
   - IP-CIDR,216.63.240.0/22,no-resolve
   - IP-CIDR,216.7.96.0/20,no-resolve
   - IP-CIDR,216.9.224.0/22,no-resolve
@@ -1179,11 +1184,13 @@ payload:
   - IP-CIDR,45.194.92.0/24,no-resolve
   - IP-CIDR,45.230.66.0/24,no-resolve
   - IP-CIDR,45.248.88.0/22,no-resolve
+  - IP-CIDR,45.3.62.0/24,no-resolve
   - IP-CIDR,45.64.52.0/22,no-resolve
   - IP-CIDR,45.64.74.0/23,no-resolve
   - IP-CIDR,45.65.32.0/22,no-resolve
   - IP-CIDR,45.74.10.0/24,no-resolve
   - IP-CIDR,45.74.16.0/24,no-resolve
+  - IP-CIDR,45.74.40.0/24,no-resolve
   - IP-CIDR,45.74.47.0/24,no-resolve
   - IP-CIDR,45.74.57.0/24,no-resolve
   - IP-CIDR,45.80.158.0/24,no-resolve
