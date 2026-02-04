@@ -2,13 +2,13 @@
   "rules": [
     {
       "domain": [
-        "blz-contentstack-assets.akamaized.net",
+        "blzprofile.akamaized.net",
         "blz-contentstack-images.akamaized.net",
-        "blzprofile.akamaized.net"
+        "blz-contentstack-assets.akamaized.net"
       ],
       "domain_suffix": [
-        ".blizzard.com",
-        ".battle.net"
+        ".battle.net",
+        ".blizzard.com"
       ]
     }
   ],
