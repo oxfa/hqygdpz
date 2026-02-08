@@ -116042,6 +116042,7 @@ DOMAIN-SUFFIX,zzzyyy.com
 DOMAIN-SUFFIX,zzzzaaaa.com
 DOMAIN-SUFFIX,zzzzzz.me
 IP-CIDR,0.0.0.0/8,no-resolve
+IP-CIDR,1.0.1.0/24,no-resolve
 IP-CIDR,1.0.2.0/23,no-resolve
 IP-CIDR,1.0.32.0/19,no-resolve
 IP-CIDR,1.0.8.0/21,no-resolve
@@ -127561,4 +127562,4 @@ IP-CIDR,64:ff9b:1::/48,no-resolve
 IP-CIDR,::/127,no-resolve
 IP-CIDR,::ffff:0:0/96,no-resolve
 IP-CIDR,fc00::/7,no-resolve
-IP-CIDR,fe80::/10,no-resolveIP-CIDR,1.0.1.0/24,no-resolve
+IP-CIDR,fe80::/10,no-resolve

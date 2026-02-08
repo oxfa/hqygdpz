@@ -116043,6 +116043,7 @@ payload:
   - DOMAIN-SUFFIX,zzzzaaaa.com
   - DOMAIN-SUFFIX,zzzzzz.me
   - IP-CIDR,0.0.0.0/8,no-resolve
+  - IP-CIDR,1.0.1.0/24,no-resolve
   - IP-CIDR,1.0.2.0/23,no-resolve
   - IP-CIDR,1.0.32.0/19,no-resolve
   - IP-CIDR,1.0.8.0/21,no-resolve
@@ -127562,4 +127563,4 @@ payload:
   - IP-CIDR6,::/127,no-resolve
   - IP-CIDR6,::ffff:0:0/96,no-resolve
   - IP-CIDR6,fc00::/7,no-resolve
-  - IP-CIDR6,fe80::/10,no-resolveIP-CIDR,1.0.1.0/24,no-resolve
+  - IP-CIDR6,fe80::/10,no-resolve
