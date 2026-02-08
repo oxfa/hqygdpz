@@ -53,10 +53,10 @@ jobs:
 
       # DIRECT RULES
       # RAW_RULESET_DIRECT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
-      RAW_RULESET_GOOGLE_CHINA_URL:       https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/refs/heads/master/google.china.conf
       RAW_LIST_DIRECT_IP_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_IP.txt
       RAW_RULESET_DIRECT_IP_URL:          https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs.list
-      RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/direct.txt
+      # RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/direct.txt
+      RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/refs/heads/master/accelerated-domains.china.conf
 
       # APPLE RULES
       RAW_RULESET_APPLE_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
@@ -107,16 +107,16 @@ jobs:
 
       - name: Setup SB
         run: |
-          curl -L -s https://api.github.com/repos/SagerNet/sing-box/releases/latest \
+          curl -sSL -s https://api.github.com/repos/SagerNet/sing-box/releases/latest \
             | grep "browser_download_url.*linux_amd64.deb" \
             | cut -d '"' -f 4 \
-            | xargs -n1 curl -L -o $GITHUB_WORKSPACE/tmp/sb.deb
+            | xargs -n1 curl -sSL -o $GITHUB_WORKSPACE/tmp/sb.deb
           sudo dpkg -i $GITHUB_WORKSPACE/tmp/sb.deb
 
       - name: Download and Process ASN File
         run: |
           mkdir $GITHUB_WORKSPACE/tmp/asn
-          curl -L "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN-CSV&license_key=${{ secrets.MAXMIND_KEY }}&suffix=zip" -o $GITHUB_WORKSPACE/tmp/asn/asn.zip
+          curl -sSL "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-ASN-CSV&license_key=${{ secrets.MAXMIND_KEY }}&suffix=zip" -o $GITHUB_WORKSPACE/tmp/asn/asn.zip
           unzip -j $GITHUB_WORKSPACE/tmp/asn/asn.zip -d $GITHUB_WORKSPACE/tmp/asn/
           python3 $GITHUB_WORKSPACE/script/asn_csv_to_json.py \
             --input_asn_files $GITHUB_WORKSPACE/tmp/asn/GeoLite2-ASN-Blocks-IPv4.csv,$GITHUB_WORKSPACE/tmp/asn/GeoLite2-ASN-Blocks-IPv6.csv \
@@ -127,52 +127,53 @@ jobs:
           # Create LAN Rules
           touch $GITHUB_WORKSPACE/tmp/lan_ruleset.txt
           # Download Direct Rules
-          curl -L ${{ env.RAW_RULESET_GOOGLE_CHINA_URL }} | sed -E -e '/^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/server=\/(.+)\/.+/DOMAIN,\1/g' | sed '1i\# REMOVE'> $GITHUB_WORKSPACE/tmp/google_direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GOOGLE_CHINA_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_LIST_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ip_list.txt || (echo "Download ${{ env.RAW_LIST_DIRECT_IP_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_LIST_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ip_list.txt || (echo "Download ${{ env.RAW_LIST_DIRECT_IP_URL }} Failed!" && exit 1)
           touch $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           ## Using RAW_LIST_DIRECT_IP_URL currently
-          ## curl -L ${{ env.RAW_RULESET_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_IP_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
+          ## curl -sSL ${{ env.RAW_RULESET_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_IP_URL }} Failed!" && exit 1)
+          ## curl -sSL ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
+          curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/server=\/(.+)\/.+/DOMAIN-SUFFIX,\1/g' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
+
           # Download Proxy Rules
           touch $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          curl -L ${{ env.RAW_RULESET_PROXY_URL }} >> $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PROXY_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_PROXY_URL }} >> $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PROXY_URL }} Failed!" && exit 1)
           # Download Block Rules
           touch $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
-          curl -L ${{ env.RAW_RULESET_IPV4_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV4_DROP_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_IPV6_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR6,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV6_DROP_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_IPV4_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV4_DROP_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_IPV6_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR6,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV6_DROP_URL }} Failed!" && exit 1)
           touch $GITHUB_WORKSPACE/tmp/block_ruleset.txt
-          curl -L ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
           # Download Warp Rules
           touch $GITHUB_WORKSPACE/tmp/warp_ruleset.txt
-          curl -L ${{ env.RAW_RULESET_ORACLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ORACLE_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_OPENAI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_OPENAI_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_REDDIT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_REDDIT_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_GITHUB_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GITHUB_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_PAYPAL_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PAYPAL_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_GOOGLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GOOGLE_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_GEMINI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GEMINI_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_YOUTUBE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_YOUTUBE_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_COPILOT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_COPILOT_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_FACEBOOK_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_FACEBOOK_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_MICROSOFT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_MICROSOFT_URL }} Failed!" && exit 1)
-          curl -L ${{ env.RAW_RULESET_CLOUDFLARE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_CLOUDFLARE_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_ORACLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ORACLE_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_OPENAI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_OPENAI_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_REDDIT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_REDDIT_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_GITHUB_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GITHUB_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_PAYPAL_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PAYPAL_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_GOOGLE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GOOGLE_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_GEMINI_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_GEMINI_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_YOUTUBE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_YOUTUBE_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_COPILOT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_COPILOT_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_FACEBOOK_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_FACEBOOK_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_MICROSOFT_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_MICROSOFT_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_CLOUDFLARE_URL }} >> $GITHUB_WORKSPACE/tmp/warp_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_CLOUDFLARE_URL }} Failed!" && exit 1)
           # Download Apple Rules
           touch $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
-          # curl -L ${{ env.RAW_RULESET_APPLE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLE_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEDAILY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDAILY_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEDEV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDEV_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEFIRMWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEFIRMWARE_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEHARDWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEHARDWARE_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEID_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEID_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEMAIL_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEMAIL_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEMEDIA_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEMEDIA_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLENEWS_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLENEWS_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLEPROXY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEPROXY_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_APPLETV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLETV_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_ICLOUD_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ICLOUD_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_ICLOUDPRIVATERELAY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ICLOUDPRIVATERELAY_URL }} Failed!" && exit 1)
-          # curl -L ${{ env.RAW_RULESET_SIRI_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_SIRI_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLE_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEDAILY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDAILY_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEDEV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEDEV_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEFIRMWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEFIRMWARE_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEHARDWARE_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEHARDWARE_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEID_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEID_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEMAIL_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEMAIL_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEMEDIA_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEMEDIA_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLENEWS_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLENEWS_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLEPROXY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLEPROXY_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_APPLETV_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_APPLETV_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_ICLOUD_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ICLOUD_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_ICLOUDPRIVATERELAY_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_ICLOUDPRIVATERELAY_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_SIRI_URL }} >> $GITHUB_WORKSPACE/tmp/apple_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_SIRI_URL }} Failed!" && exit 1)
 
       - name: Process Apple Rules
         run: |
@@ -234,8 +235,6 @@ jobs:
 
       - name: Process Direct Rules
         run: |
-          # remove google china domains from direct ruleset
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/tmp/google_direct_ruleset.txt
           # add lan rules to direct ruleset
           cat $GITHUB_WORKSPACE/tmp/lan_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           # process direct ip list
