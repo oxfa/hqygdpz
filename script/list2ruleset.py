@@ -40,3 +40,5 @@ if __name__ == "__main__":
 
     with open(outputFile, "w") as file:
         file.write(output_data)
+        if output_data and not output_data.endswith("\n"):
+            file.write("\n")

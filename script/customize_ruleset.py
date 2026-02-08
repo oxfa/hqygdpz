@@ -62,7 +62,7 @@ def process_file(inputFile, patchFile, mode):
     else:
         pass
     with open(inputFile, "w") as fd_file:
-        fd_file.write("\n".join(lines_file))
+        fd_file.write("\n".join(lines_file) + "\n" if lines_file else "")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

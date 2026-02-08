@@ -107,4 +107,6 @@ if __name__ == "__main__":
     with open(output_file, "w") as file_out:
         file_out.seek(0)
         file_out.write(final_text)
+        if final_text and not final_text.endswith("\n"):
+            file_out.write("\n")
         file_out.truncate()

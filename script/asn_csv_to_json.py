@@ -30,3 +30,4 @@ if __name__ == "__main__":
 
     with open(args.output_asn_json, "w", encoding="utf-8") as file_json:
         json.dump(asn_json, file_json, indent=2, sort_keys=True, ensure_ascii=False)
+        file_json.write("\n")
