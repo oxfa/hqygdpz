@@ -847,6 +847,7 @@ IP-CIDR,200.13.192.0/19,no-resolve
 IP-CIDR,200.13.64.0/20,no-resolve
 IP-CIDR,200.189.44.0/22,no-resolve
 IP-CIDR,200.22.0.0/16,no-resolve
+IP-CIDR,200.229.31.0/24,no-resolve
 IP-CIDR,200.23.137.0/24,no-resolve
 IP-CIDR,200.23.165.0/24,no-resolve
 IP-CIDR,200.33.170.0/24,no-resolve
