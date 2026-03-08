@@ -9,5 +9,4 @@
 ## DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn:80\/mmtls\/
 ## DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn:443\/mmtls\/
 ## DOMAIN-REGEX,^https?:\/\/[^/]+\.weixin\.qq\.com\.cn:8080\/mmtls\/
-DOMAIN,zhipuaishengchan.datasink.sensorsdata.cn
 # REMOVE
