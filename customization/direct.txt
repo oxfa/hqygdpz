@@ -50,12 +50,10 @@ DOMAIN-SUFFIX,2kcoretech.online
 ### oneplus
 DOMAIN-SUFFIX,allsaints.top
 # REMOVE
-DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,microsoft
-DOMAIN-SUFFIX,ms
+DOMAIN-KEYWORD,google:cascade
+DOMAIN-KEYWORD,microsoft:cascade
+DOMAIN-SUFFIX,ms:cascade
+DOMAIN-SUFFIX,top
 DOMAIN-SUFFIX,wang
-DOMAIN-SUFFIX,oracle.com
-DOMAIN-SUFFIX,office.net
 DOMAIN-SUFFIX,r.bing.com
 DOMAIN-SUFFIX,th.bing.com
-DOMAIN-SUFFIX,windowsphone.com
