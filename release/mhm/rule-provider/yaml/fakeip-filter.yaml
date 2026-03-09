@@ -83,3 +83,6 @@ payload:
   # CMB Bank
   - "+.cmbimg.com"
   - "+.cmbchina.com"
+  # BOCOM Bank
+  - "+.bankcomm.cn"
+  - "+.bankcomm.com"
