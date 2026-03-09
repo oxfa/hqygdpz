@@ -65,6 +65,9 @@ def generate_yaml_format(domains):
     """
     Generate domain mode yaml format with payload section.
     
+    All domain entries are single-quoted to ensure they are treated as literal strings
+    and to escape special characters like *, +, etc.
+    
     Args:
         domains: List of domain pattern strings
     
@@ -76,7 +79,8 @@ def generate_yaml_format(domains):
     
     lines = ["payload:"]
     for domain in domains:
-        lines.append(f"  - {domain}")
+        # Single-quote domains to ensure special characters are preserved
+        lines.append(f"  - '{domain}'")
     
     return '\n'.join(lines) + '\n'
 
