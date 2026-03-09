@@ -320,6 +320,13 @@ jobs:
               -e "s/DOMAIN-SUFFIX,\([^,]*\)/*.\1 = server:tls:\/\/223.5.5.5/" \
               $GITHUB_WORKSPACE/tmp/direct_ruleset.txt > $GITHUB_WORKSPACE/release/sr/sgmodule/host/domain_dns_direct_gndot.sgmodule
 
+      - name: Process Fakeip Filter Rules
+        run: |
+          python3 $GITHUB_WORKSPACE/script/generate_fakeip_filter.py \
+            $GITHUB_WORKSPACE/customization/fakeip_filter.txt \
+            -txt $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/fakeip_filter.txt \
+            -yaml $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/fakeip_filter.yaml
+
       - name: Process SB Ruleset
         run: |
           for file in $(ls $GITHUB_WORKSPACE/release/mhm/rule-provider/txt); do \
