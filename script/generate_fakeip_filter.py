@@ -91,7 +91,7 @@ def generate_sr_format(domains):
     1. * -> Skip (mhm match-all is different from sr behavior)
     2. .example.com -> *.example.com (mhm multi-level subdomains only, no domain)
     3. +.example.com -> *example.com (mhm domain + multi-level subdomains)
-    4. *.example.com -> *example.com (mhm single-level vs sr greedy wildcard)
+    4. *.example.com -> *.example.com (mhm single-level vs sr greedy wildcard)
     5. example.com -> example.com (Exact match)
     
     Args:
@@ -112,8 +112,8 @@ def generate_sr_format(domains):
             # 3. +.example.com -> *example.com
             sr_domains.append("*" + domain[2:])
         elif domain.startswith("*."):
-            # 4. *.example.com -> *example.com
-            sr_domains.append("*" + domain[2:])
+            # 4. *.example.com -> *.example.com
+            sr_domains.append(domain)
         else:
             # 5. example.com -> example.com (and internal wildcards like time.*.com)
             sr_domains.append(domain)
