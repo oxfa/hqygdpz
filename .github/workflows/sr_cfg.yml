@@ -330,6 +330,9 @@ jobs:
       - name: Process SB Ruleset
         run: |
           for file in $(ls $GITHUB_WORKSPACE/release/mhm/rule-provider/txt); do \
+            if [[ "$file" == "fakeip_filter.txt" ]]; then
+              continue
+            fi
             python3 $GITHUB_WORKSPACE/script/ruleset_to_sbruleset.py \
               --input  $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/${file} \
               --output $GITHUB_WORKSPACE/release/sb/json/${file%.txt}.json \
