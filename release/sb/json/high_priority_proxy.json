@@ -5,11 +5,11 @@
         "nic.eu.org"
       ],
       "domain_suffix": [
-        ".debian.org",
-        ".libgen.li",
-        ".ipqualityscore.com",
         ".momot.rs",
-        ".booksdl.lc"
+        ".booksdl.lc",
+        ".libgen.li",
+        ".debian.org",
+        ".ipqualityscore.com"
       ]
     }
   ],
