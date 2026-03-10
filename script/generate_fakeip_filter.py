@@ -12,8 +12,6 @@ Output:
 """
 
 import argparse
-import os
-
 
 def extract_domains(input_file):
     """
@@ -85,6 +83,44 @@ def generate_yaml_format(domains):
     return '\n'.join(lines) + '\n'
 
 
+def generate_sr_format(domains):
+    """
+    Generate sr host list format.
+    
+    Conversion logic from mhm Wildcard to sr:
+    1. * -> Skip (mhm match-all is different from sr behavior)
+    2. .example.com -> *.example.com (mhm multi-level subdomains only, no domain)
+    3. +.example.com -> *example.com (mhm domain + multi-level subdomains)
+    4. *.example.com -> *example.com (mhm single-level vs sr greedy wildcard)
+    5. example.com -> example.com (Exact match)
+    
+    Args:
+        domains: List of domain pattern strings from mhm format
+    
+    Returns:
+        String content for sr host list
+    """
+    sr_domains = []
+    for domain in domains:
+        if domain == "*":
+            # 1. * -> nothing
+            continue
+        elif domain.startswith("."):
+            # 2. .example.com -> *.example.com
+            sr_domains.append("*." + domain[1:])
+        elif domain.startswith("+."):
+            # 3. +.example.com -> *example.com
+            sr_domains.append("*" + domain[2:])
+        elif domain.startswith("*."):
+            # 4. *.example.com -> *example.com
+            sr_domains.append("*" + domain[2:])
+        else:
+            # 5. example.com -> example.com (and internal wildcards like time.*.com)
+            sr_domains.append(domain)
+    
+    return '\n'.join(sr_domains) + ('\n' if sr_domains else '')
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate mhm format files for fakeip_filter in domain mode"
@@ -94,57 +130,44 @@ def main():
         help="Input file (customization/fakeip_filter.txt)"
     )
     parser.add_argument(
-        "-txt",
-        "--output_txt",
+        "-mt",
+        "--mhm_txt",
         help="Output txt file (default: release/mhm/rule-provider/txt/fakeip_filter.txt)"
     )
     parser.add_argument(
-        "-yaml",
-        "--output_yaml",
+        "-my",
+        "--mhm_yaml",
         help="Output yaml file (default: release/mhm/rule-provider/yaml/fakeip_filter.yaml)"
+    )
+    parser.add_argument(
+        "-st",
+        "--sr_txt",
+        help="Output sr txt file (default: release/sr/rule-set/fakeip_filter.txt)"
     )
     
     args = parser.parse_args()
     
     # Extract domains from input file
     domains = extract_domains(args.input_file)
-    
-    # Determine output file paths
-    output_txt = args.output_txt or os.path.join(
-        os.path.dirname(args.input_file),
-        '..',
-        'release',
-        'mhm',
-        'rule-provider',
-        'txt',
-        'fakeip_filter.txt'
-    )
-    
-    output_yaml = args.output_yaml or os.path.join(
-        os.path.dirname(args.input_file),
-        '..',
-        'release',
-        'mhm',
-        'rule-provider',
-        'yaml',
-        'fakeip_filter.yaml'
-    )
+
     
     # Ensure output directories exist
-    os.makedirs(os.path.dirname(output_txt), exist_ok=True)
-    os.makedirs(os.path.dirname(output_yaml), exist_ok=True)
+    # os.makedirs(os.path.dirname(mhm_txt), exist_ok=True)
+    # os.makedirs(os.path.dirname(mhm_yaml), exist_ok=True)
     
-    # Write txt format
-    txt_content = generate_txt_format(domains)
-    with open(output_txt, 'w', encoding='utf-8') as f:
-        f.write(txt_content)
-    print(f"✓ Generated {output_txt} ({len(domains)} domains)")
+   
+    # Generate and save formats
+    if args.mhm_txt:
+        with open(args.mhm_txt, 'w', encoding='utf-8') as f:
+            f.write(generate_txt_format(domains))
     
-    # Write yaml format
-    yaml_content = generate_yaml_format(domains)
-    with open(output_yaml, 'w', encoding='utf-8') as f:
-        f.write(yaml_content)
-    print(f"✓ Generated {output_yaml} ({len(domains)} domains)")
+    if args.sr_txt:
+        with open(args.sr_txt, 'w', encoding='utf-8') as f:
+            f.write(generate_sr_format(domains))
+            
+    if args.mhm_yaml:
+        with open(args.mhm_yaml, 'w', encoding='utf-8') as f:
+            f.write(generate_yaml_format(domains))
     
     return 0
 

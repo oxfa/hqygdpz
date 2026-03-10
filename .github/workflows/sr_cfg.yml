@@ -324,8 +324,9 @@ jobs:
         run: |
           python3 $GITHUB_WORKSPACE/script/generate_fakeip_filter.py \
             $GITHUB_WORKSPACE/customization/fakeip_filter.txt \
-            -txt $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/fakeip_filter.txt \
-            -yaml $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/fakeip_filter.yaml
+            --mhm_txt $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/fakeip_filter.txt \
+            --mhm_yaml $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/fakeip_filter.yaml \
+            --sr_txt $GITHUB_WORKSPACE/release/sr/rule-set/fakeip_filter.txt
 
       - name: Process SB Ruleset
         run: |
