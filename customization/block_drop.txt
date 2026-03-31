@@ -14,6 +14,7 @@ DOMAIN-SUFFIX,dataflow.biliapi.com
 DOMAIN-SUFFIX,dlswbr.baidu.com
 DOMAIN-SUFFIX,cstm.baidu.com
 ## jd
+DOMAIN-SUFFIX,jddebug.com
 DOMAIN-SUFFIX,mars.jd.com
 DOMAIN-SUFFIX,uranus.jd.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
