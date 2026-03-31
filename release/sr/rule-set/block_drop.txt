@@ -21,6 +21,7 @@ DOMAIN-SUFFIX,dlswbr.baidu.com
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,go.sohu.com
 DOMAIN-SUFFIX,iadsdk.apple.com
+DOMAIN-SUFFIX,jddebug.com
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
 DOMAIN-SUFFIX,mars.jd.com
@@ -1244,7 +1245,6 @@ IP-CIDR,45.144.212.0/24,no-resolve
 IP-CIDR,45.148.10.0/24,no-resolve
 IP-CIDR,45.148.121.0/24,no-resolve
 IP-CIDR,45.15.21.0/24,no-resolve
-IP-CIDR,45.151.71.0/24,no-resolve
 IP-CIDR,45.152.149.0/24,no-resolve
 IP-CIDR,45.153.34.0/24,no-resolve
 IP-CIDR,45.154.98.0/24,no-resolve
