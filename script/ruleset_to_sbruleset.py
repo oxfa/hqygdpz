@@ -108,7 +108,7 @@ class SBRuleset(dict):
                     domain_keyword.append(rule_content)
                 elif rule_type == "DOMAIN-REGEX":
                     domain_regex.append(rule_content)
-                elif rule_type = "IP-CIDR":
+                elif rule_type == "IP-CIDR":
                     ip_cidr.append(rule_content)
                 elif rule_type == "IP-ASN":
                     try:
