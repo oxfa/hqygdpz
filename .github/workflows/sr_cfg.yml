@@ -239,8 +239,9 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_from_adding_list -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/apple.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/direct_domains.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-
+          # gen direct_domains.txt
           cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | sed 's/DOMAIN-SUFFIX,\|DOMAIN,//g' > $GITHUB_WORKSPACE/release/text/direct_domains.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/release/text/direct_domains.txt
           # add lan rules to direct ruleset
           cat $GITHUB_WORKSPACE/tmp/lan_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           # process direct ip list
