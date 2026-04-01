@@ -94,8 +94,8 @@ jobs:
 
       - name: Download & Create Rule Files
         run: |
-          # Create LAN Rules
-          touch $GITHUB_WORKSPACE/tmp/lan_ruleset.txt
+          # Create LAN Domain Rules
+          touch $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt
           # Download Direct Rules
           curl -sSL ${{ env.RAW_LIST_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ip_list.txt || (echo "Download ${{ env.RAW_LIST_DIRECT_IP_URL }} Failed!" && exit 1)
           touch $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
@@ -106,14 +106,14 @@ jobs:
 
           # Download Proxy Rules
           touch $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          curl -sSL ${{ env.RAW_RULESET_PROXY_URL }} >> $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PROXY_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_PROXY_URL }} | sed 's/IP-CIDR6/IP-CIDR/g' >> $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PROXY_URL }} Failed!" && exit 1)
           # Download Block Rules
           touch $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
           curl -sSL ${{ env.RAW_RULESET_IPV4_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV4_DROP_URL }} Failed!" && exit 1)
           curl -sSL ${{ env.RAW_RULESET_IPV6_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV6_DROP_URL }} Failed!" && exit 1)
           touch $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
-          curl -sSL ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} | sed 's/IP-CIDR6/IP-CIDR/g' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
           # Download Apple Rules
           touch $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
 
@@ -155,14 +155,15 @@ jobs:
           sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp3.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp3.txt
 
-      - name: Process LAN Rules
+      - name: Process LAN Domain Rules
         run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/lan_ruleset.txt -p $GITHUB_WORKSPACE/customization/lan.txt
-          cat $GITHUB_WORKSPACE/tmp/lan_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/lan.yaml \
-                                                          $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/lan.txt \
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt -p $GITHUB_WORKSPACE/customization/lan_domains.txt
+          cat $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/lan_domains.yaml \
+                                                          $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/lan_domains.txt \
                                                           > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/lan.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/lan.txt > $GITHUB_WORKSPACE/release/sr/rule-set/lan.txt
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/lan_domains.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/lan_domains.txt > $GITHUB_WORKSPACE/release/sr/rule-set/lan_domains.txt
+          cat $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt | sed '/DOMAIN,\|DOMAIN-SUFFIX,/d' > $GITHUB_WORKSPACE/release/text/lan_domains.txt
 
       - name: Process Direct Rules
         run: |
@@ -170,13 +171,16 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_from_adding_list -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/apple.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/direct_domains.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          # gen direct_domains.txt
+          # gen direct_domains_without_lan_domains.txt
           cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | sed 's/DOMAIN-SUFFIX,\|DOMAIN,//g' > $GITHUB_WORKSPACE/release/text/direct_domains.txt
-          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/release/text/direct_domains.txt
-          # add lan rules to direct ruleset
-          cat $GITHUB_WORKSPACE/tmp/lan_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/release/text/direct_domains_without_lan_domains.txt
+          # add lan domain rules to direct ruleset
+          cat $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           # process direct ip list
+          ## global direct ip
           python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py $GITHUB_WORKSPACE/tmp/direct_ip_list.txt | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
+          ## lan direct ip
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/direct_ips.txt
           # remove redundancy
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_redundancy -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           # reorder
