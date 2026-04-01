@@ -18894,6 +18894,7 @@ DOMAIN-SUFFIX,brosmed.com
 DOMAIN-SUFFIX,brother-bsh.com
 DOMAIN-SUFFIX,brother-cn.net
 DOMAIN-SUFFIX,brother-movie.com
+DOMAIN-SUFFIX,brother.com
 DOMAIN-SUFFIX,brotherchem.com
 DOMAIN-SUFFIX,browurl.com
 DOMAIN-SUFFIX,brpcb.com
@@ -70672,6 +70673,7 @@ DOMAIN-SUFFIX,msdnxitong.com
 DOMAIN-SUFFIX,msdpmarathon.com
 DOMAIN-SUFFIX,msdprc.com
 DOMAIN-SUFFIX,msfpay.com
+DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,msftonlinelab.com
 DOMAIN-SUFFIX,msg.work
 DOMAIN-SUFFIX,msgamego.com
