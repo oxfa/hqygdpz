@@ -18249,7 +18249,6 @@ DOMAIN-SUFFIX,cnt.hd21.com
 DOMAIN-SUFFIX,cnt.iceporn.com
 DOMAIN-SUFFIX,cnt.iol.it
 DOMAIN-SUFFIX,cnt.logoslovo.ru
-DOMAIN-SUFFIX,cnt.mail.netbk.co.jp
 DOMAIN-SUFFIX,cnt.my
 DOMAIN-SUFFIX,cnt.nov.ru
 DOMAIN-SUFFIX,cnt.rate.ru
@@ -108235,7 +108234,7 @@ IP-CIDR,47.100.123.169/32,no-resolve
 IP-CIDR,47.101.175.206/32,no-resolve
 IP-CIDR,59.111.239.61/32,no-resolve
 IP-CIDR,59.111.239.62/32,no-resolve
-IP-CIDR,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
-IP-CIDR,2402:4e00:1900:1700:0:9554:1ad9:c3a/128,no-resolve
-IP-CIDR,2402:db40:5100:1011::5/128,no-resolve
-IP-CIDR,240e:928:1400:10::25/128,no-resolve
+IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
+IP-CIDR6,2402:4e00:1900:1700:0:9554:1ad9:c3a/128,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
+IP-CIDR6,240e:928:1400:10::25/128,no-resolve
