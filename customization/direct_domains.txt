@@ -1,8 +1,16 @@
 ## The Comment Should Use ##
 ## Direct Domains Only ##
 # ADD
+## 2k game
+DOMAIN-SUFFIX,2k.com
+DOMAIN-SUFFIX,2kct.onl
+DOMAIN-SUFFIX,firaxislive.com
+DOMAIN-SUFFIX,civilization.com
+DOMAIN-SUFFIX,2kcoretech.online
 ## alibaba
 DOMAIN-SUFFIX,mmstat.com
+## brother printer
+DOMAIN-SUFFIX,brother.com
 ## qualcomm domains
 DOMAIN,path1.xtracloud.net
 DOMAIN,path2.xtracloud.net
@@ -23,6 +31,10 @@ DOMAIN,stun.voipbuster.com
 DOMAIN,stun.voipstunt.com
 DOMAIN,stun.voxgratia.org
 DOMAIN,stun.xten.com
+## microsoft
+DOMAIN-SUFFIX,msftconnecttest.com
+## oneplus
+DOMAIN-SUFFIX,allsaints.top
 ## steam
 DOMAIN-SUFFIX,s.team
 DOMAIN-SUFFIX,steam.tv
@@ -41,12 +53,6 @@ DOMAIN-SUFFIX,steammobile.akamaized.net
 DOMAIN-SUFFIX,steambroadcast.akamaized.net
 DOMAIN-SUFFIX,steampipe.akamaized.net
 DOMAIN-SUFFIX,steampipe-partner.akamaized.net
-## 2k game
-DOMAIN-SUFFIX,2k.com
-DOMAIN-SUFFIX,2kct.onl
-DOMAIN-SUFFIX,firaxislive.com
-DOMAIN-SUFFIX,civilization.com
-DOMAIN-SUFFIX,2kcoretech.online
 ## other (Unknown)
 ### oneplus
 DOMAIN-SUFFIX,allsaints.top
