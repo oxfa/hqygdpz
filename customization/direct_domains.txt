@@ -1,4 +1,5 @@
 ## The Comment Should Use ##
+## Direct Domains Only ##
 # ADD
 ## alibaba
 DOMAIN-SUFFIX,mmstat.com

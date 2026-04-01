@@ -14,7 +14,7 @@ LIST_MHM_RULESET_MAPPING = {
     "domain": "DOMAIN-SUFFIX",
     "regexp": "DOMAIN-REGEX",
     "ip-cidr": "IP-CIDR",
-    "ip-cidr6": "IP-CIDR6",
+    "ip-cidr6": "IP-CIDR",
     "ip-asn": "IP-ASN"
 }
 
@@ -24,7 +24,6 @@ MHM_RULESET_SR_RULESET_MAPPING = {
     "DOMAIN-SUFFIX": "DOMAIN-SUFFIX",
     "DOMAIN-REGEX": "URL-REGEX",
     "IP-CIDR": "IP-CIDR",
-    "IP-CIDR6": "IP-CIDR",
     "IP-ASN": "IP-ASN"
 }
 
