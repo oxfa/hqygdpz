@@ -118286,6 +118286,7 @@ payload:
   - IP-CIDR,1.80.0.0/12,no-resolve
   - IP-CIDR,10.0.0.0/8,no-resolve
   - IP-CIDR,100.64.0.0/10,no-resolve
+  - IP-CIDR,100::/63,no-resolve
   - IP-CIDR,101.0.0.0/22,no-resolve
   - IP-CIDR,101.1.0.0/22,no-resolve
   - IP-CIDR,101.101.100.0/24,no-resolve
@@ -122700,10 +122701,12 @@ payload:
   - IP-CIDR,2001:67c:ebc::/48,no-resolve
   - IP-CIDR,2001:7fa:10::/48,no-resolve
   - IP-CIDR,2001:7fa:5::/48,no-resolve
+  - IP-CIDR,2001::/23,no-resolve
   - IP-CIDR,2001:c68::/32,no-resolve
   - IP-CIDR,2001:cc0::/32,no-resolve
   - IP-CIDR,2001:da8::/31,no-resolve
   - IP-CIDR,2001:daa::/32,no-resolve
+  - IP-CIDR,2001:db8::/32,no-resolve
   - IP-CIDR,2001:dc7::/32,no-resolve
   - IP-CIDR,2001:dcc:501::/48,no-resolve
   - IP-CIDR,2001:dd8:1::/48,no-resolve
@@ -122807,6 +122810,7 @@ payload:
   - IP-CIDR,2001:e88::/32,no-resolve
   - IP-CIDR,2001:f38::/32,no-resolve
   - IP-CIDR,2001:f88::/32,no-resolve
+  - IP-CIDR,2002::/16,no-resolve
   - IP-CIDR,202.0.100.0/23,no-resolve
   - IP-CIDR,202.0.122.0/23,no-resolve
   - IP-CIDR,202.0.176.0/22,no-resolve
@@ -128787,6 +128791,7 @@ payload:
   - IP-CIDR,39.128.0.0/10,no-resolve
   - IP-CIDR,39.64.0.0/11,no-resolve
   - IP-CIDR,39.96.0.0/13,no-resolve
+  - IP-CIDR,3fff::/20,no-resolve
   - IP-CIDR,40.0.176.0/20,no-resolve
   - IP-CIDR,40.0.248.0/21,no-resolve
   - IP-CIDR,40.125.128.0/17,no-resolve
@@ -129690,6 +129695,7 @@ payload:
   - IP-CIDR,64.235.227.160/29,no-resolve
   - IP-CIDR,64.235.230.152/30,no-resolve
   - IP-CIDR,64.71.138.0/25,no-resolve
+  - IP-CIDR,64:ff9b:1::/48,no-resolve
   - IP-CIDR,65.111.0.0/19,no-resolve
   - IP-CIDR,65.55.60.184/30,no-resolve
   - IP-CIDR,65.97.55.248/29,no-resolve
@@ -129784,13 +129790,7 @@ payload:
   - IP-CIDR,98.124.142.88/30,no-resolve
   - IP-CIDR,99.77.241.0/24,no-resolve
   - IP-CIDR,99.83.96.0/24,no-resolve
-  - IP-CIDR6,100::/63,no-resolve
-  - IP-CIDR6,2001::/23,no-resolve
-  - IP-CIDR6,2001:db8::/32,no-resolve
-  - IP-CIDR6,2002::/16,no-resolve
-  - IP-CIDR6,3fff::/20,no-resolve
-  - IP-CIDR6,64:ff9b:1::/48,no-resolve
-  - IP-CIDR6,::/127,no-resolve
-  - IP-CIDR6,::ffff:0:0/96,no-resolve
-  - IP-CIDR6,fc00::/7,no-resolve
-  - IP-CIDR6,fe80::/10,no-resolve
+  - IP-CIDR,::/127,no-resolve
+  - IP-CIDR,::ffff:0:0/96,no-resolve
+  - IP-CIDR,fc00::/7,no-resolve
+  - IP-CIDR,fe80::/10,no-resolve
