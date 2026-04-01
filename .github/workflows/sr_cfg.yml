@@ -163,7 +163,7 @@ jobs:
                                                           > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/lan_domains.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/lan_domains.txt > $GITHUB_WORKSPACE/release/sr/rule-set/lan_domains.txt
-          cat $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt | sed '/DOMAIN,\|DOMAIN-SUFFIX,/d' > $GITHUB_WORKSPACE/release/text/lan_domains.txt
+          cat $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt | sed 's/DOMAIN-SUFFIX,\|DOMAIN,//g' > $GITHUB_WORKSPACE/release/text/lan_domains.txt
 
       - name: Process Direct Rules
         run: |
@@ -172,7 +172,7 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/direct_ruleset.txt -p $GITHUB_WORKSPACE/customization/direct_domains.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
           # gen direct_domains_without_lan_domains.txt
-          cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | sed 's/DOMAIN-SUFFIX,\|DOMAIN,//g' > $GITHUB_WORKSPACE/release/text/direct_domains.txt
+          cat $GITHUB_WORKSPACE/tmp/direct_ruleset.txt | sed 's/DOMAIN-SUFFIX,\|DOMAIN,//g' > $GITHUB_WORKSPACE/release/text/direct_domains_without_lan_domains.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/release/text/direct_domains_without_lan_domains.txt
           # add lan domain rules to direct ruleset
           cat $GITHUB_WORKSPACE/tmp/lan_domains_ruleset.txt >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
