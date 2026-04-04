@@ -54,8 +54,7 @@ DOMAIN-SUFFIX,steambroadcast.akamaized.net
 DOMAIN-SUFFIX,steampipe.akamaized.net
 DOMAIN-SUFFIX,steampipe-partner.akamaized.net
 ## other (Unknown)
-### oneplus
-DOMAIN-SUFFIX,allsaints.top
+DOMAIN-SUFFIX,tophub.today
 # REMOVE
 DOMAIN-KEYWORD,google:cascade
 DOMAIN-KEYWORD,microsoft:cascade
