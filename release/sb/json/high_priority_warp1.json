@@ -2,8 +2,8 @@
   "rules": [
     {
       "domain": [
-        "blzprofile.akamaized.net",
         "blz-contentstack-assets.akamaized.net",
+        "blzprofile.akamaized.net",
         "blz-contentstack-images.akamaized.net"
       ],
       "domain_suffix": [
