@@ -93167,6 +93167,7 @@ DOMAIN-SUFFIX,tencentyun.com
 DOMAIN-SUFFIX,tencentzhzf.com
 DOMAIN-SUFFIX,tenchii.com
 DOMAIN-SUFFIX,tencity.com
+DOMAIN-SUFFIX,tenclass.net
 DOMAIN-SUFFIX,tendacn.com
 DOMAIN-SUFFIX,tendata.net
 DOMAIN-SUFFIX,tendawifi.com
@@ -104680,6 +104681,7 @@ DOMAIN-SUFFIX,xiaozhang365.com
 DOMAIN-SUFFIX,xiaozhao365.com
 DOMAIN-SUFFIX,xiaozhen.com
 DOMAIN-SUFFIX,xiaozhenpaotui.com
+DOMAIN-SUFFIX,xiaozhi.me
 DOMAIN-SUFFIX,xiaozhibaoxian.com
 DOMAIN-SUFFIX,xiaozhibo.com
 DOMAIN-SUFFIX,xiaozhimed.com
@@ -120429,7 +120431,10 @@ IP-CIDR,104.212.68.151/32,no-resolve
 IP-CIDR,104.212.68.152/32,no-resolve
 IP-CIDR,104.212.68.57/32,no-resolve
 IP-CIDR,104.212.68.58/32,no-resolve
+IP-CIDR,104.219.211.0/24,no-resolve
 IP-CIDR,104.227.65.96/28,no-resolve
+IP-CIDR,104.233.144.0/21,no-resolve
+IP-CIDR,104.233.159.0/24,no-resolve
 IP-CIDR,104.237.80.0/21,no-resolve
 IP-CIDR,104.28.101.0/27,no-resolve
 IP-CIDR,104.28.101.32/29,no-resolve
@@ -120748,6 +120753,9 @@ IP-CIDR,106.56.0.0/13,no-resolve
 IP-CIDR,106.74.0.0/15,no-resolve
 IP-CIDR,106.8.0.0/15,no-resolve
 IP-CIDR,106.80.0.0/12,no-resolve
+IP-CIDR,107.148.150.0/23,no-resolve
+IP-CIDR,107.148.84.0/23,no-resolve
+IP-CIDR,107.149.198.0/23,no-resolve
 IP-CIDR,107.150.125.199/32,no-resolve
 IP-CIDR,107.151.212.0/24,no-resolve
 IP-CIDR,107.153.91.0/24,no-resolve
@@ -124215,7 +124223,6 @@ IP-CIDR,218.213.92.0/24,no-resolve
 IP-CIDR,218.240.0.0/13,no-resolve
 IP-CIDR,218.249.0.0/16,no-resolve
 IP-CIDR,218.252.0.0/17,no-resolve
-IP-CIDR,218.252.128.0/19,no-resolve
 IP-CIDR,218.253.0.0/18,no-resolve
 IP-CIDR,218.56.0.0/13,no-resolve
 IP-CIDR,218.64.0.0/11,no-resolve
@@ -128293,6 +128300,7 @@ IP-CIDR,36.96.0.0/11,no-resolve
 IP-CIDR,38.101.160.40/32,no-resolve
 IP-CIDR,38.101.162.120/32,no-resolve
 IP-CIDR,38.103.64.26/32,no-resolve
+IP-CIDR,38.12.3.0/24,no-resolve
 IP-CIDR,38.181.0.0/19,no-resolve
 IP-CIDR,38.181.32.0/23,no-resolve
 IP-CIDR,38.181.34.0/24,no-resolve
