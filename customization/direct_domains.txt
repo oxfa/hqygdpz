@@ -53,6 +53,9 @@ DOMAIN-SUFFIX,steammobile.akamaized.net
 DOMAIN-SUFFIX,steambroadcast.akamaized.net
 DOMAIN-SUFFIX,steampipe.akamaized.net
 DOMAIN-SUFFIX,steampipe-partner.akamaized.net
+## xiaozhi ai
+DOMAIN-SUFFIX,xiaozhi.me
+DOMAIN-SUFFIX,tenclass.net
 ## other (Unknown)
 DOMAIN-SUFFIX,tophub.today
 # REMOVE
