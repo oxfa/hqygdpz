@@ -70,6 +70,8 @@ time1.cloud.tencent.com
 ## *.n.n.srv.nintendo.net
 ## Sony
 ## +.stun.playstation.net
+## Syncthing
++.syncthing.net
 ## Microsoft
 ## *.*.xboxlive.com
 ## xbox.*.microsoft.com
@@ -80,10 +82,12 @@ time1.cloud.tencent.com
 ## Tencent
 localhost.sec.qq.com
 localhost.ptlogin2.qq.com
-localhost.*.weixin.qq.com
+localhost.weixin.qq.com
 ## CMB Bank
 +.cmbimg.com
 +.cmbchina.com
 ## BOCOM Bank
 +.bankcomm.cn
 +.bankcomm.com
+## 360
+local.info.g9hc4.cn
