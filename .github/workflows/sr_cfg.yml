@@ -106,7 +106,7 @@ jobs:
           ## curl -sSL ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
           ## for dnsmasq list
           # curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/server=\/(.+)\/.+/DOMAIN-SUFFIX,\1/g' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
-          curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX/' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
+          curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX,/' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
 
           # Download Proxy Rules
           touch $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
@@ -117,7 +117,7 @@ jobs:
           curl -sSL ${{ env.RAW_RULESET_IPV6_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV6_DROP_URL }} Failed!" && exit 1)
           touch $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           # curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
-          curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX/' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1) 
+          curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX,/' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1) 
           ## Make BLOCKHTTPDNS optional
           # curl -sSL ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} | sed 's/IP-CIDR6/IP-CIDR/g' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
           # Download Apple Rules
