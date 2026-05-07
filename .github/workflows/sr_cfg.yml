@@ -42,7 +42,8 @@ jobs:
       # RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AdvertisingLite/AdvertisingLite.list
       # RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Advertising/Advertising.list
 
-      RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/anti-ad-surge.txt
+      RAW_RULESET_BLOCK_URL:              https://is.gd/TbWnb2
+      # RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/anti-ad-surge.txt
       RAW_RULESET_BLOCKHTTPDNS_URL:       https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
       # RAW_RULESET_ASN_DROP_URL:           https://www.spamhaus.org/drop/asndrop.json
       RAW_RULESET_IPV4_DROP_URL:          https://www.spamhaus.org/drop/drop_v4.json
@@ -56,7 +57,8 @@ jobs:
       RAW_LIST_DIRECT_IP_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_IP.txt
       # RAW_RULESET_DIRECT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs.list
       # RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/direct.txt
-      RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/refs/heads/master/accelerated-domains.china.conf
+      RAW_RULESET_DIRECT_DOMAIN_URL:      https://is.gd/u3iBWF
+      # RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/refs/heads/master/accelerated-domains.china.conf
 
     steps:
       - name: Checkout the "master" branch of this repo
@@ -102,7 +104,9 @@ jobs:
           ## Using RAW_LIST_DIRECT_IP_URL currently
           ## curl -sSL ${{ env.RAW_RULESET_DIRECT_IP_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_IP_URL }} Failed!" && exit 1)
           ## curl -sSL ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
-          curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/server=\/(.+)\/.+/DOMAIN-SUFFIX,\1/g' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
+          ## for dnsmasq list
+          # curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/server=\/(.+)\/.+/DOMAIN-SUFFIX,\1/g' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
+          curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX/' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
 
           # Download Proxy Rules
           touch $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
@@ -112,7 +116,8 @@ jobs:
           curl -sSL ${{ env.RAW_RULESET_IPV4_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV4_DROP_URL }} Failed!" && exit 1)
           curl -sSL ${{ env.RAW_RULESET_IPV6_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV6_DROP_URL }} Failed!" && exit 1)
           touch $GITHUB_WORKSPACE/tmp/block_ruleset.txt
-          curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
+          # curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX/' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1) 
           ## Make BLOCKHTTPDNS optional
           # curl -sSL ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} | sed 's/IP-CIDR6/IP-CIDR/g' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
           # Download Apple Rules
