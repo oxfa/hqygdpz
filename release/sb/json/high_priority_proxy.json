@@ -6,10 +6,10 @@
       ],
       "domain_suffix": [
         ".booksdl.lc",
-        ".momot.rs",
-        ".ipqualityscore.com",
         ".debian.org",
-        ".libgen.li"
+        ".libgen.li",
+        ".momot.rs",
+        ".ipqualityscore.com"
       ]
     }
   ],
