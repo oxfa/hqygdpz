@@ -3,12 +3,12 @@
     {
       "domain": [
         "blz-contentstack-images.akamaized.net",
-        "blz-contentstack-assets.akamaized.net",
-        "blzprofile.akamaized.net"
+        "blzprofile.akamaized.net",
+        "blz-contentstack-assets.akamaized.net"
       ],
       "domain_suffix": [
-        ".battle.net",
-        ".blizzard.com"
+        ".blizzard.com",
+        ".battle.net"
       ]
     }
   ],
