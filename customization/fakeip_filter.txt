@@ -51,8 +51,13 @@ time1.cloud.tencent.com
 ## *.router.asus.com
 ## heartbeat.belkin.com
 ## Games
+### Blizzard
 +.battle.net
 +.blizzard.com
++.blzprofile.akamaized.net
++.blz-contentstack-assets.akamaized.net
++.blz-contentstack-images.akamaized.net
++.d9qcypg7o58bv.cloudfront.net
 ## Google
 ## proxy.golang.org
 ## lens.l.google.com
