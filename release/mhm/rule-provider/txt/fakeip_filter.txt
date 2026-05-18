@@ -40,6 +40,10 @@ time1.cloud.tencent.com
 +.stun.*.*.*.*.*
 +.battle.net
 +.blizzard.com
++.blzprofile.akamaized.net
++.blz-contentstack-assets.akamaized.net
++.blz-contentstack-images.akamaized.net
++.d9qcypg7o58bv.cloudfront.net
 +.syncthing.net
 localhost.sec.qq.com
 localhost.ptlogin2.qq.com
