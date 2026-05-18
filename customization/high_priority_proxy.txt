@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,libgen.li
 DOMAIN-SUFFIX,booksdl.lc
 DOMAIN-SUFFIX,debian.org
 DOMAIN-SUFFIX,ipqualityscore.com
+## blizzard battle net asian server
 DOMAIN-SUFFIX,battle.net
 DOMAIN-SUFFIX,blizzard.com
 DOMAIN-SUFFIX,blzprofile.akamaized.net
