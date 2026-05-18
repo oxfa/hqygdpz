@@ -1,9 +1,3 @@
 ## The Comment Should Use ##
 # ADD
-## blizzard battle net asian server
-DOMAIN-SUFFIX,battle.net
-DOMAIN-SUFFIX,blizzard.com
-DOMAIN,blzprofile.akamaized.net
-DOMAIN,blz-contentstack-assets.akamaized.net
-DOMAIN,blz-contentstack-images.akamaized.net
 # REMOVE
