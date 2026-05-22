@@ -8,7 +8,6 @@ DOMAIN-SUFFIX,mum.alibabachengdun.com
 ## apple
 DOMAIN-SUFFIX,iadsdk.apple.com
 ## bilibili
-DOMAIN,httpdns.bilivideo.com
 DOMAIN-SUFFIX,dataflow.biliapi.com
 ## baidu
 DOMAIN-SUFFIX,dlswbr.baidu.com
