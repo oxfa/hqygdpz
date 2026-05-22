@@ -539,6 +539,7 @@ payload:
   - IP-CIDR,185.7.214.0/23,no-resolve
   - IP-CIDR,185.77.248.0/24,no-resolve
   - IP-CIDR,185.81.68.0/24,no-resolve
+  - IP-CIDR,185.84.157.0/24,no-resolve
   - IP-CIDR,185.93.89.0/24,no-resolve
   - IP-CIDR,185.99.98.0/24,no-resolve
   - IP-CIDR,186.179.0.0/18,no-resolve
