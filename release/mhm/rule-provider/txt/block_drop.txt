@@ -1,7 +1,6 @@
 DOMAIN,ap-bigdata-bj.cn-beijing.log.aliyuncs.com
 DOMAIN,ap-client-logs-bj.cn-beijing.dualstack.log.aliyuncs.com
 DOMAIN,ap-snow.cn-beijing.dualstack.log.aliyuncs.com
-DOMAIN,httpdns.bilivideo.com
 DOMAIN,httpdns.music.163.com
 DOMAIN-SUFFIX,ad.intl.xiaomi.com
 DOMAIN-SUFFIX,ad.mi.com
