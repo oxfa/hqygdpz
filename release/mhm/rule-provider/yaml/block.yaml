@@ -5110,6 +5110,7 @@ payload:
   - DOMAIN-SUFFIX,ad.walkgame.com
   - DOMAIN-SUFFIX,ad.weibo.com
   - DOMAIN-SUFFIX,ad.weixin.qq.com
+  - DOMAIN-SUFFIX,ad.where.com
   - DOMAIN-SUFFIX,ad.winrar.com.cn
   - DOMAIN-SUFFIX,ad.wretch.cc
   - DOMAIN-SUFFIX,ad.wsod.com
