@@ -1600,6 +1600,7 @@ IP-CIDR,92.118.39.0/24,no-resolve
 IP-CIDR,92.242.62.0/24,no-resolve
 IP-CIDR,92.255.57.0/24,no-resolve
 IP-CIDR,92.255.85.0/24,no-resolve
+IP-CIDR,92.62.246.0/24,no-resolve
 IP-CIDR,92.63.197.0/24,no-resolve
 IP-CIDR,92.87.6.0/24,no-resolve
 IP-CIDR,93.114.187.0/24,no-resolve
