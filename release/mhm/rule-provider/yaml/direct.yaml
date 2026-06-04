@@ -29530,6 +29530,7 @@ payload:
   - DOMAIN-SUFFIX,gt-semi.com
   - DOMAIN-SUFFIX,gt520.com
   - DOMAIN-SUFFIX,gtac.cc
+  - DOMAIN-SUFFIX,gtadata.com
   - DOMAIN-SUFFIX,gtags.net
   - DOMAIN-SUFFIX,gtajl.com
   - DOMAIN-SUFFIX,gtaos.com
@@ -45701,6 +45702,7 @@ payload:
   - DOMAIN-SUFFIX,kuaih5.com
   - DOMAIN-SUFFIX,kuaihaodai.com
   - DOMAIN-SUFFIX,kuaihecaishui.com
+  - DOMAIN-SUFFIX,kuaihuoyun.com
   - DOMAIN-SUFFIX,kuaiji.com
   - DOMAIN-SUFFIX,kuaiji.so
   - DOMAIN-SUFFIX,kuaiji521.com
@@ -59164,6 +59166,7 @@ payload:
   - DOMAIN-SUFFIX,qudayun.com
   - DOMAIN-SUFFIX,qudingshui.com
   - DOMAIN-SUFFIX,qudong.com
+  - DOMAIN-SUFFIX,qudong9.com
   - DOMAIN-SUFFIX,qudou100.com
   - DOMAIN-SUFFIX,quechao.vip
   - DOMAIN-SUFFIX,quechen.com
@@ -66996,6 +66999,7 @@ payload:
   - DOMAIN-SUFFIX,supmea.com
   - DOMAIN-SUFFIX,supmeter.com
   - DOMAIN-SUFFIX,supmil.net
+  - DOMAIN-SUFFIX,supoin.com
   - DOMAIN-SUFFIX,supool.com
   - DOMAIN-SUFFIX,supor.com
   - DOMAIN-SUFFIX,suporgroup.com
@@ -67279,6 +67283,7 @@ payload:
   - DOMAIN-SUFFIX,sxmyh.com
   - DOMAIN-SUFFIX,sxncb.com
   - DOMAIN-SUFFIX,sxnxs.com
+  - DOMAIN-SUFFIX,sxnxxny.com
   - DOMAIN-SUFFIX,sxnycl.com
   - DOMAIN-SUFFIX,sxol.com
   - DOMAIN-SUFFIX,sxpmg.com
@@ -74988,6 +74993,7 @@ payload:
   - DOMAIN-SUFFIX,wgtechjx.com
   - DOMAIN-SUFFIX,wgxdxx.com
   - DOMAIN-SUFFIX,wgxy.net
+  - DOMAIN-SUFFIX,wgy.cc
   - DOMAIN-SUFFIX,wh-baidu.com
   - DOMAIN-SUFFIX,wh-bus.com
   - DOMAIN-SUFFIX,wh-charity.com
@@ -78585,6 +78591,7 @@ payload:
   - DOMAIN-SUFFIX,xinminghui.com
   - DOMAIN-SUFFIX,xinminheng.com
   - DOMAIN-SUFFIX,xinmintian.vip
+  - DOMAIN-SUFFIX,xinmizx.com
   - DOMAIN-SUFFIX,xinnakj.com
   - DOMAIN-SUFFIX,xinnet.com
   - DOMAIN-SUFFIX,xinnetdns.com
@@ -83574,6 +83581,7 @@ payload:
   - DOMAIN-SUFFIX,yunjian.com
   - DOMAIN-SUFFIX,yunjian.net
   - DOMAIN-SUFFIX,yunjiasu-cdn.net
+  - DOMAIN-SUFFIX,yunjiasu.cc
   - DOMAIN-SUFFIX,yunjiasu.com
   - DOMAIN-SUFFIX,yunjiazheng.com
   - DOMAIN-SUFFIX,yunjichaobiao.com
@@ -86623,6 +86631,7 @@ payload:
   - DOMAIN-SUFFIX,zjcrjzj.com
   - DOMAIN-SUFFIX,zjcshjt.com
   - DOMAIN-SUFFIX,zjct56.com
+  - DOMAIN-SUFFIX,zjctm.net
   - DOMAIN-SUFFIX,zjcuhb.com
   - DOMAIN-SUFFIX,zjcxbank.com
   - DOMAIN-SUFFIX,zjcyyy.com
@@ -87161,6 +87170,7 @@ payload:
   - DOMAIN-SUFFIX,zkydib.com
   - DOMAIN-SUFFIX,zkyl.vip
   - DOMAIN-SUFFIX,zkyouxi.com
+  - DOMAIN-SUFFIX,zkyxc.com
   - DOMAIN-SUFFIX,zkyxls.com
   - DOMAIN-SUFFIX,zkzbkj.com
   - DOMAIN-SUFFIX,zkzls.com
@@ -89160,7 +89170,6 @@ payload:
   - IP-CIDR,103.180.226.0/23,no-resolve
   - IP-CIDR,103.181.164.0/23,no-resolve
   - IP-CIDR,103.181.234.0/23,no-resolve
-  - IP-CIDR,103.182.96.0/23,no-resolve
   - IP-CIDR,103.183.122.0/23,no-resolve
   - IP-CIDR,103.183.124.0/23,no-resolve
   - IP-CIDR,103.183.26.0/23,no-resolve
@@ -91988,7 +91997,6 @@ payload:
   - IP-CIDR,150.242.96.0/22,no-resolve
   - IP-CIDR,150.248.0.0/16,no-resolve
   - IP-CIDR,150.255.0.0/16,no-resolve
-  - IP-CIDR,151.242.180.0/22,no-resolve
   - IP-CIDR,151.247.148.0/23,no-resolve
   - IP-CIDR,151.249.90.0/23,no-resolve
   - IP-CIDR,152.104.128.0/17,no-resolve
@@ -92510,7 +92518,6 @@ payload:
   - IP-CIDR,175.186.0.0/15,no-resolve
   - IP-CIDR,175.188.0.0/14,no-resolve
   - IP-CIDR,175.24.0.0/14,no-resolve
-  - IP-CIDR,175.29.22.0/23,no-resolve
   - IP-CIDR,175.30.0.0/15,no-resolve
   - IP-CIDR,175.42.0.0/15,no-resolve
   - IP-CIDR,175.44.0.0/16,no-resolve
@@ -94451,7 +94458,6 @@ payload:
   - IP-CIDR,213.182.216.0/21,no-resolve
   - IP-CIDR,213.199.169.0/24,no-resolve
   - IP-CIDR,213.255.231.0/24,no-resolve
-  - IP-CIDR,216.38.170.0/23,no-resolve
   - IP-CIDR,217.146.9.192/28,no-resolve
   - IP-CIDR,217.7.142.0/32,no-resolve
   - IP-CIDR,218.0.0.0/11,no-resolve
@@ -98679,7 +98685,6 @@ payload:
   - IP-CIDR,38.60.143.0/24,no-resolve
   - IP-CIDR,38.60.144.0/23,no-resolve
   - IP-CIDR,38.60.214.0/32,no-resolve
-  - IP-CIDR,38.76.140.0/23,no-resolve
   - IP-CIDR,38.94.110.99/32,no-resolve
   - IP-CIDR,39.0.0.0/24,no-resolve
   - IP-CIDR,39.0.128.0/17,no-resolve
@@ -99542,7 +99547,8 @@ payload:
   - IP-CIDR,61.14.216.0/21,no-resolve
   - IP-CIDR,61.14.240.0/21,no-resolve
   - IP-CIDR,61.15.0.0/18,no-resolve
-  - IP-CIDR,61.18.0.0/17,no-resolve
+  - IP-CIDR,61.18.0.0/18,no-resolve
+  - IP-CIDR,61.18.64.0/19,no-resolve
   - IP-CIDR,61.232.0.0/14,no-resolve
   - IP-CIDR,61.236.0.0/15,no-resolve
   - IP-CIDR,61.240.0.0/14,no-resolve
