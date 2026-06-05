@@ -2,6 +2,7 @@
 # ADD
 DOMAIN-SUFFIX,gov
 ## T-mobile
+DOMAIN,tmobilees.mpeasylink.com
 DOMAIN-SUFFIX,t-esim.us
 DOMAIN-SUFFIX,tmobile.com
 DOMAIN-SUFFIX,t-mobile.com
