@@ -2,6 +2,11 @@
   "rules": [
     {
       "domain_suffix": [
+        ".voicestream.net",
+        ".t-esim.us",
+        ".t-mobile.com",
+        ".t-mobile.net",
+        ".tmobile.com",
         ".gov"
       ]
     }

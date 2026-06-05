@@ -1,2 +1,7 @@
 payload:
   - DOMAIN-SUFFIX,gov
+  - DOMAIN-SUFFIX,t-esim.us
+  - DOMAIN-SUFFIX,tmobile.com
+  - DOMAIN-SUFFIX,t-mobile.com
+  - DOMAIN-SUFFIX,t-mobile.net
+  - DOMAIN-SUFFIX,voicestream.net
