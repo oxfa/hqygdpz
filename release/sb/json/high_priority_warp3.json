@@ -1,6 +1,10 @@
 {
   "rules": [
-    {}
+    {
+      "domain_suffix": [
+        ".mcc525.pub.3gppnetwork.org"
+      ]
+    }
   ],
   "version": 3
 }
