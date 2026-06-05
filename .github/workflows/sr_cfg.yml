@@ -136,7 +136,10 @@ jobs:
       - name: Process High Priority Rules
         run: |
           echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt
-          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq1.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt
           echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt
           echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt
           echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt
@@ -145,9 +148,19 @@ jobs:
           sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_direct.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_direct.txt
 
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt -p $GITHUB_WORKSPACE/customization/high_priority_proxy.txt
-          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_proxy.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_proxy.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_proxy.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq1.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq1.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq2.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq3.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq_default.txt
+
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq1.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq1.yaml
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq2.yaml
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq3.yaml
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq_default.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq1.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq1.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq2.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq3.txt
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq_default.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt -p $GITHUB_WORKSPACE/customization/high_priority_warp1.txt
           sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp1.yaml
