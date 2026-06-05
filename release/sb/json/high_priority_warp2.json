@@ -1,13 +1,16 @@
 {
   "rules": [
     {
+      "domain": [
+        "tmobilees.mpeasylink.com"
+      ],
       "domain_suffix": [
-        ".voicestream.net",
-        ".t-esim.us",
-        ".t-mobile.com",
         ".t-mobile.net",
+        ".voicestream.net",
+        ".gov",
+        ".t-mobile.com",
         ".tmobile.com",
-        ".gov"
+        ".t-esim.us"
       ]
     }
   ],
