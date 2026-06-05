@@ -1,3 +1,5 @@
 ## The Comment Should Use ##
 # ADD
+## MCC
+DOMAIN-SUFFIX,mcc525.pub.3gppnetwork.org
 # REMOVE
