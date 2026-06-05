@@ -31,6 +31,13 @@ DOMAIN,stun.voipbuster.com
 DOMAIN,stun.voipstunt.com
 DOMAIN,stun.voxgratia.org
 DOMAIN,stun.xten.com
+## MCC
+### HK MO
+DOMAIN-SUFFIX,mcc454.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc455.pub.3gppnetwork.org
+### CN
+DOMAIN-SUFFIX,mcc460.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc460.pub.3gppnetwork.org
 ## microsoft
 DOMAIN-SUFFIX,msftconnecttest.com
 ## oneplus
