@@ -1,4 +1,10 @@
 ## The Comment Should Use ##
 # ADD
 DOMAIN-SUFFIX,gov
+## T-mobile
+DOMAIN-SUFFIX,t-esim.us
+DOMAIN-SUFFIX,tmobile.com
+DOMAIN-SUFFIX,t-mobile.com
+DOMAIN-SUFFIX,t-mobile.net
+DOMAIN-SUFFIX,voicestream.net
 # REMOVE
