@@ -5,13 +5,19 @@
         "tmobilees.mpeasylink.com"
       ],
       "domain_suffix": [
-        ".t-mobile.com",
-        ".mcc310.pub.3gppnetwork.org",
-        ".t-mobile.net",
+        ".mcc311.pub.3gppnetwork.org",
         ".gov",
+        ".t-mobile.net",
+        ".voicestream.net",
+        ".mcc316.pub.3gppnetwork.org",
+        ".mcc314.pub.3gppnetwork.org",
         ".t-esim.us",
+        ".mcc315.pub.3gppnetwork.org",
+        ".mcc313.pub.3gppnetwork.org",
+        ".t-mobile.com",
         ".tmobile.com",
-        ".voicestream.net"
+        ".mcc312.pub.3gppnetwork.org",
+        ".mcc310.pub.3gppnetwork.org"
       ]
     }
   ],

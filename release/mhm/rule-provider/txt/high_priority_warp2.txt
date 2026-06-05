@@ -1,5 +1,11 @@
 DOMAIN-SUFFIX,gov
 DOMAIN-SUFFIX,mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc311.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc312.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc313.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc314.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc315.pub.3gppnetwork.org
+DOMAIN-SUFFIX,mcc316.pub.3gppnetwork.org
 DOMAIN,tmobilees.mpeasylink.com
 DOMAIN-SUFFIX,t-esim.us
 DOMAIN-SUFFIX,tmobile.com
