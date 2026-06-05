@@ -1,6 +1,12 @@
 {
   "rules": [
-    {}
+    {
+      "domain_suffix": [
+        ".mcc455.pub.3gppnetwork.org",
+        ".mcc460.pub.3gppnetwork.org",
+        ".mcc454.pub.3gppnetwork.org"
+      ]
+    }
   ],
   "version": 3
 }
