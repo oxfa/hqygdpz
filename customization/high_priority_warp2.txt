@@ -1,6 +1,7 @@
 ## The Comment Should Use ##
 # ADD
 DOMAIN-SUFFIX,gov
+DOMAIN-SUFFIX,mcc310.pub.3gppnetwork.org
 ## T-mobile
 DOMAIN,tmobilees.mpeasylink.com
 DOMAIN-SUFFIX,t-esim.us
