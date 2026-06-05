@@ -1,5 +1,6 @@
 payload:
   - DOMAIN-SUFFIX,gov
+  - DOMAIN-SUFFIX,mcc310.pub.3gppnetwork.org
   - DOMAIN,tmobilees.mpeasylink.com
   - DOMAIN-SUFFIX,t-esim.us
   - DOMAIN-SUFFIX,tmobile.com
