@@ -49,9 +49,6 @@ jobs:
       RAW_RULESET_IPV4_DROP_URL:          https://www.spamhaus.org/drop/drop_v4.json
       RAW_RULESET_IPV6_DROP_URL:          https://www.spamhaus.org/drop/drop_v6.json
 
-      # PROXY RULES
-      RAW_RULESET_PROXY_URL:              https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ProxyLite/ProxyLite.list
-
       # DIRECT RULES
       # RAW_RULESET_DIRECT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
       RAW_LIST_DIRECT_IP_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs_IP.txt
@@ -108,9 +105,6 @@ jobs:
           # curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/server=\/(.+)\/.+/DOMAIN-SUFFIX,\1/g' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
           curl -sSL $RAW_RULESET_DIRECT_DOMAIN_URL | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX,/' >> $GITHUB_WORKSPACE/tmp/direct_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DIRECT_DOMAIN_URL }} Failed!" && exit 1)
 
-          # Download Proxy Rules
-          touch $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          curl -sSL ${{ env.RAW_RULESET_PROXY_URL }} | sed 's/IP-CIDR6/IP-CIDR/g' >> $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_PROXY_URL }} Failed!" && exit 1)
           # Download Block Rules
           touch $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
           curl -sSL ${{ env.RAW_RULESET_IPV4_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV4_DROP_URL }} Failed!" && exit 1)
@@ -211,18 +205,6 @@ jobs:
                                                              > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/direct.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/direct.txt > $GITHUB_WORKSPACE/release/sr/rule-set/direct.txt
-
-      - name: Process Proxy Rules
-        run: |
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_redundancy -i $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m remove_from_adding_list -i $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt -p $GITHUB_WORKSPACE/tmp/direct_ruleset.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt -p $GITHUB_WORKSPACE/customization/proxy.txt
-          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt
-          cat $GITHUB_WORKSPACE/tmp/proxy_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/proxy.yaml \
-                                                            $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/proxy.txt \
-                                                            > /dev/null
-          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/proxy.yaml
-          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/proxy.txt > $GITHUB_WORKSPACE/release/sr/rule-set/proxy.txt
 
       - name: Process Block Rules
         run: |
