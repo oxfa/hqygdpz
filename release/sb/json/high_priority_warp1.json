@@ -1,11 +1,6 @@
 {
   "rules": [
-    {
-      "domain_suffix": [
-        ".mcc441.pub.3gppnetwork.org",
-        ".mcc440.pub.3gppnetwork.org"
-      ]
-    }
+    {}
   ],
   "version": 3
 }
