@@ -20705,6 +20705,7 @@ payload:
   - DOMAIN-SUFFIX,de0.cc
   - DOMAIN-SUFFIX,de1000.com
   - DOMAIN-SUFFIX,de123.net
+  - DOMAIN-SUFFIX,de1919.com
   - DOMAIN-SUFFIX,deadnine.com
   - DOMAIN-SUFFIX,deafchina.com
   - DOMAIN-SUFFIX,deahu.com
@@ -49308,6 +49309,7 @@ payload:
   - DOMAIN-SUFFIX,ly2y.com
   - DOMAIN-SUFFIX,ly333.com
   - DOMAIN-SUFFIX,ly39zx.com
+  - DOMAIN-SUFFIX,ly522.com
   - DOMAIN-SUFFIX,ly93.cc
   - DOMAIN-SUFFIX,lyagyd.com
   - DOMAIN-SUFFIX,lyangchuanbo.com
@@ -67810,6 +67812,7 @@ payload:
   - DOMAIN-SUFFIX,szdaily.com
   - DOMAIN-SUFFIX,szdcjd.com
   - DOMAIN-SUFFIX,szddns.net
+  - DOMAIN-SUFFIX,szdesigncenter.org
   - DOMAIN-SUFFIX,szdesigner.org
   - DOMAIN-SUFFIX,szdesy.com
   - DOMAIN-SUFFIX,szdf.com
@@ -87098,6 +87101,7 @@ payload:
   - DOMAIN-SUFFIX,zjwanma.com
   - DOMAIN-SUFFIX,zjwater.com
   - DOMAIN-SUFFIX,zjwater.org
+  - DOMAIN-SUFFIX,zjwcjm.com
   - DOMAIN-SUFFIX,zjwcqp.com
   - DOMAIN-SUFFIX,zjwebapp.com
   - DOMAIN-SUFFIX,zjwentou.com
