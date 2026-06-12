@@ -78679,7 +78679,6 @@ stun.xten.com = server:tls://223.5.5.5
 *.xinminghui.com = server:tls://223.5.5.5
 *.xinminheng.com = server:tls://223.5.5.5
 *.xinmintian.vip = server:tls://223.5.5.5
-*.xinmizx.com = server:tls://223.5.5.5
 *.xinnakj.com = server:tls://223.5.5.5
 *.xinnet.com = server:tls://223.5.5.5
 *.xinnetdns.com = server:tls://223.5.5.5
