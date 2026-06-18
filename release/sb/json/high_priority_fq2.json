@@ -7,16 +7,16 @@
       "domain_suffix": [
         ".mcc310.pub.3gppnetwork.org",
         ".mcc312.pub.3gppnetwork.org",
-        ".tmobile.com",
-        ".t-mobile.net",
         ".mcc315.pub.3gppnetwork.org",
-        ".mcc316.pub.3gppnetwork.org",
-        ".t-esim.us",
-        ".mcc313.pub.3gppnetwork.org",
-        ".mcc311.pub.3gppnetwork.org",
-        ".mcc314.pub.3gppnetwork.org",
+        ".tmobile.com",
+        ".voicestream.net",
         ".t-mobile.com",
-        ".voicestream.net"
+        ".mcc316.pub.3gppnetwork.org",
+        ".mcc313.pub.3gppnetwork.org",
+        ".mcc314.pub.3gppnetwork.org",
+        ".t-mobile.net",
+        ".t-esim.us",
+        ".mcc311.pub.3gppnetwork.org"
       ]
     }
   ],
