@@ -6469,6 +6469,7 @@ payload:
   - DOMAIN-SUFFIX,ads-static.conde.digital
   - DOMAIN-SUFFIX,ads-static.xhscdn.com
   - DOMAIN-SUFFIX,ads-tracking.collectiveaudience.co
+  - DOMAIN-SUFFIX,ads-trk.vidible.tv
   - DOMAIN-SUFFIX,ads-twitter.com
   - DOMAIN-SUFFIX,ads-union.jd.com
   - DOMAIN-SUFFIX,ads-uo.api.leiniao.com
@@ -25801,6 +25802,7 @@ payload:
   - DOMAIN-SUFFIX,dshbju.com
   - DOMAIN-SUFFIX,dshbxx.com
   - DOMAIN-SUFFIX,dshcej.aosom.co.uk
+  - DOMAIN-SUFFIX,dshdly.com
   - DOMAIN-SUFFIX,dshdzj.com
   - DOMAIN-SUFFIX,dshfbd.com
   - DOMAIN-SUFFIX,dshhkl.com
@@ -25922,7 +25924,6 @@ payload:
   - DOMAIN-SUFFIX,dswegk.com
   - DOMAIN-SUFFIX,dswepngsrbhza.space
   - DOMAIN-SUFFIX,dswfhx.com
-  - DOMAIN-SUFFIX,dswgyl.com
   - DOMAIN-SUFFIX,dswhem.com
   - DOMAIN-SUFFIX,dswlpq.com
   - DOMAIN-SUFFIX,dswmrn.com
@@ -77389,7 +77390,6 @@ payload:
   - DOMAIN-SUFFIX,sstats.deluxe.com
   - DOMAIN-SUFFIX,sstats.dice.com
   - DOMAIN-SUFFIX,sstats.dignityhealth.org
-  - DOMAIN-SUFFIX,sstats.directgeneral.com
   - DOMAIN-SUFFIX,sstats.drugstore.com
   - DOMAIN-SUFFIX,sstats.ds-pharma.com
   - DOMAIN-SUFFIX,sstats.ds-pharma.jp
