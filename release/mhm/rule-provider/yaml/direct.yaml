@@ -20711,7 +20711,6 @@ payload:
   - DOMAIN-SUFFIX,de0.cc
   - DOMAIN-SUFFIX,de1000.com
   - DOMAIN-SUFFIX,de123.net
-  - DOMAIN-SUFFIX,de1919.com
   - DOMAIN-SUFFIX,deadnine.com
   - DOMAIN-SUFFIX,deafchina.com
   - DOMAIN-SUFFIX,deahu.com
@@ -25220,6 +25219,7 @@ payload:
   - DOMAIN-SUFFIX,favang.com
   - DOMAIN-SUFFIX,favdeb.com
   - DOMAIN-SUFFIX,favopen.com
+  - DOMAIN-SUFFIX,favoreducation.com
   - DOMAIN-SUFFIX,favorites.ren
   - DOMAIN-SUFFIX,faw-vw.com
   - DOMAIN-SUFFIX,faw.com
@@ -67881,7 +67881,6 @@ payload:
   - DOMAIN-SUFFIX,szdaily.com
   - DOMAIN-SUFFIX,szdcjd.com
   - DOMAIN-SUFFIX,szddns.net
-  - DOMAIN-SUFFIX,szdesigncenter.org
   - DOMAIN-SUFFIX,szdesigner.org
   - DOMAIN-SUFFIX,szdesy.com
   - DOMAIN-SUFFIX,szdf.com
@@ -87187,7 +87186,6 @@ payload:
   - DOMAIN-SUFFIX,zjwanma.com
   - DOMAIN-SUFFIX,zjwater.com
   - DOMAIN-SUFFIX,zjwater.org
-  - DOMAIN-SUFFIX,zjwcjm.com
   - DOMAIN-SUFFIX,zjwcqp.com
   - DOMAIN-SUFFIX,zjwebapp.com
   - DOMAIN-SUFFIX,zjwentou.com
@@ -89160,7 +89158,7 @@ payload:
   - IP-CIDR,103.150.216.0/23,no-resolve
   - IP-CIDR,103.150.24.0/23,no-resolve
   - IP-CIDR,103.150.244.0/23,no-resolve
-  - IP-CIDR,103.150.37.0/24,no-resolve
+  - IP-CIDR,103.150.36.0/23,no-resolve
   - IP-CIDR,103.150.66.0/23,no-resolve
   - IP-CIDR,103.150.72.0/23,no-resolve
   - IP-CIDR,103.151.138.0/23,no-resolve
@@ -99753,7 +99751,6 @@ payload:
   - IP-CIDR,60.63.0.0/16,no-resolve
   - IP-CIDR,61.10.128.0/20,no-resolve
   - IP-CIDR,61.10.160.0/19,no-resolve
-  - IP-CIDR,61.10.224.0/19,no-resolve
   - IP-CIDR,61.10.96.0/20,no-resolve
   - IP-CIDR,61.114.80.0/20,no-resolve
   - IP-CIDR,61.128.0.0/10,no-resolve
