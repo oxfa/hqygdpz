@@ -26138,7 +26138,6 @@ DOMAIN-SUFFIX,dssrbe.com
 DOMAIN-SUFFIX,dsswdz.com
 DOMAIN-SUFFIX,dst05lp2.net.mydays.de
 DOMAIN-SUFFIX,dstaca.com
-DOMAIN-SUFFIX,dstdff.com
 DOMAIN-SUFFIX,dstfrx.com
 DOMAIN-SUFFIX,dstha9.com
 DOMAIN-SUFFIX,dstillery.com
@@ -97006,6 +97005,7 @@ DOMAIN-SUFFIX,yieldlab.net
 DOMAIN-SUFFIX,yieldlift.com
 DOMAIN-SUFFIX,yieldlove-ad-serving.net
 DOMAIN-SUFFIX,yieldlove.com
+DOMAIN-SUFFIX,yieldmanager.com
 DOMAIN-SUFFIX,yieldmanager.net
 DOMAIN-SUFFIX,yieldmo.com
 DOMAIN-SUFFIX,yieldoptimizer.com
