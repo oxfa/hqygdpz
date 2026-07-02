@@ -17,20 +17,15 @@ DOMAIN,path2.xtracloud.net
 DOMAIN,path3.xtracloud.net
 ## syncthing's stun servers
 DOMAIN-SUFFIX,syncthing.net
-DOMAIN,stun.callwithus.com
 DOMAIN,stun.counterpath.com
-DOMAIN,stun.counterpath.net
-DOMAIN,stun.ekiga.net
-DOMAIN,stun.ideasip.com
+DOMAIN,stun.hitv.com
 DOMAIN,stun.internetcalls.com
+DOMAIN,stun.miwifi.com
 DOMAIN,stun.schlund.de
 DOMAIN,stun.sipgate.net
 DOMAIN,stun.voip.aebc.com
-DOMAIN,stun.voiparound.com
 DOMAIN,stun.voipbuster.com
 DOMAIN,stun.voipstunt.com
-DOMAIN,stun.voxgratia.org
-DOMAIN,stun.xten.com
 ## MCC
 ### HK MO
 DOMAIN-SUFFIX,mcc454.pub.3gppnetwork.org
