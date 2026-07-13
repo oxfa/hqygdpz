@@ -2,45 +2,45 @@
   "rules": [
     {
       "domain": [
+        "appldnld.apple.com.edgesuite.net",
+        "ohttp-relay1.fastly-edge.com",
         "ocsp.digicert.com",
         "apple-relay.fastly-edge.com",
+        "apple-relay.cloudflare.com",
         "crl4.digicert.com",
         "cp4.cloudflare.com",
-        "apple-relay.cloudflare.com",
-        "ohttp-relay1.fastly-edge.com",
-        "crl3.digicert.com",
-        "appldnld.apple.com.edgesuite.net"
+        "crl3.digicert.com"
       ],
       "domain_suffix": [
-        ".akadns.net",
-        ".apple.com",
-        ".mac.com",
-        ".applemusic.com",
-        ".akamai.net",
-        ".itunes.com",
-        ".edgekey.net",
-        ".apple",
-        ".icloud.com.cn",
-        ".apple-mapkit.com",
-        ".apzones.com",
-        ".cdn-apple.com",
-        ".me.com",
-        ".mzstatic.com",
-        ".apple.cn",
-        ".apple-cloudkit.com",
         ".icloud-content.com",
-        ".apple.com.cn",
-        ".icloud.com",
-        ".apple-livephotoskit.com",
+        ".akadns.net",
+        ".me.com",
+        ".edgekey.net",
+        ".icloud.com.cn",
         ".aaplimg.com",
+        ".cdn-apple.com",
+        ".itunes.com",
+        ".apple-cloudkit.com",
+        ".akamai.net",
+        ".apple.cn",
+        ".mzstatic.com",
+        ".apzones.com",
+        ".apple-mapkit.com",
+        ".apple.com.cn",
+        ".apple-dns.net",
+        ".icloud.com",
+        ".apple",
+        ".mac.com",
+        ".apple-livephotoskit.com",
+        ".apple.com",
         ".akamaiedge.net",
-        ".apple-dns.net"
+        ".applemusic.com"
       ],
       "ip_cidr": [
         "2620:149::/32",
         "2403:300::/32",
-        "2a01:b740::/32",
-        "17.0.0.0/8"
+        "17.0.0.0/8",
+        "2a01:b740::/32"
       ]
     }
   ],
