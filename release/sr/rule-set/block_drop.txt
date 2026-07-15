@@ -470,6 +470,7 @@ IP-CIDR,170.247.220.0/22,no-resolve
 IP-CIDR,170.67.0.0/16,no-resolve
 IP-CIDR,170.83.232.0/22,no-resolve
 IP-CIDR,171.26.0.0/16,no-resolve
+IP-CIDR,172.111.128.0/17,no-resolve
 IP-CIDR,172.247.38.0/24,no-resolve
 IP-CIDR,172.70.206.0/23,no-resolve
 IP-CIDR,172.70.214.0/23,no-resolve
