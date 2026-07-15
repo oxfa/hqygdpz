@@ -50061,6 +50061,7 @@ stun.voipstunt.com = server:tls://223.5.5.5
 *.mcc454.pub.3gppnetwork.org = server:tls://223.5.5.5
 *.mcc455.pub.3gppnetwork.org = server:tls://223.5.5.5
 *.mcc460.pub.3gppnetwork.org = server:tls://223.5.5.5
+*.mcc461.pub.3gppnetwork.org = server:tls://223.5.5.5
 *.mccbim.com = server:tls://223.5.5.5
 *.mccchina.com = server:tls://223.5.5.5
 *.mcchcdn.com = server:tls://223.5.5.5
