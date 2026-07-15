@@ -15,6 +15,7 @@ payload:
   - 'time.*.edu.cn'
   - 'time.*.apple.com'
   - 'time-ios.apple.com'
+  - 'time-macos.apple.com'
   - 'time1.*.com'
   - 'time2.*.com'
   - 'time3.*.com'
