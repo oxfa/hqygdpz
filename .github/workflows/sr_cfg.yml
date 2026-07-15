@@ -59,7 +59,7 @@ jobs:
 
     steps:
       - name: Checkout the "master" branch of this repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Set variables
         run: |
