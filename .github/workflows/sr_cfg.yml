@@ -114,11 +114,12 @@ jobs:
           curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX,/' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1) 
           ## Make BLOCKHTTPDNS optional
           # curl -sSL ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} | sed 's/IP-CIDR6/IP-CIDR/g' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
-          # Download Apple Rules
-          touch $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
 
       - name: Process Apple Rules
         run: |
+          touch $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
+          touch $GITHUB_WORKSPACE/tmp/apple_udp_ruleset.txt
+          # customization/apple.txt
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/apple_ruleset.txt -p $GITHUB_WORKSPACE/customization/apple.txt
           python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/apple_ruleset.txt
           cat $GITHUB_WORKSPACE/tmp/apple_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/apple.yaml \
@@ -126,6 +127,15 @@ jobs:
                                                             > /dev/null
           sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/apple.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple.txt > $GITHUB_WORKSPACE/release/sr/rule-set/apple.txt
+          # customization/apple_udp.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/tmp/apple_udp_ruleset.txt -p $GITHUB_WORKSPACE/customization/apple_udp.txt
+          python3 $GITHUB_WORKSPACE/script/sort_ruleset.py $GITHUB_WORKSPACE/tmp/apple_udp_ruleset.txt
+          cat $GITHUB_WORKSPACE/tmp/apple_udp_ruleset.txt | tee $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/apple_udp.yaml \
+                                                            $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple_udp.txt \
+                                                            > /dev/null
+          sed -i -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/apple_udp.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/apple_udp.txt > $GITHUB_WORKSPACE/release/sr/rule-set/apple_udp.txt
+
 
       - name: Process High Priority Rules
         run: |

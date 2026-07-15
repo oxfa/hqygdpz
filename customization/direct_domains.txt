@@ -61,10 +61,25 @@ DOMAIN-SUFFIX,tenclass.net
 ## other (Unknown)
 DOMAIN-SUFFIX,tophub.today
 # REMOVE
-DOMAIN-KEYWORD,google:cascade
-DOMAIN-KEYWORD,microsoft:cascade
+## Akamai
+DOMAIN-SUFFIX,akadns99.net
+DOMAIN-SUFFIX,akamai.com
+DOMAIN-SUFFIX,akamai.net
+## CDN
+DOMAIN-SUFFIX,cdnetworks.com
+DOMAIN-SUFFIX,farfetch-contents.com
+## microsoft
 DOMAIN-SUFFIX,ms:cascade
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,microsoftuwp.com
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,bing.net
+DOMAIN-SUFFIX,bingj.com
+DOMAIN-SUFFIX,live.com
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,office.net
+DOMAIN-SUFFIX,windowssearch.com
+DOMAIN-SUFFIX,windowsupdate.com
+## others
 DOMAIN-SUFFIX,top
 DOMAIN-SUFFIX,wang
-DOMAIN-SUFFIX,r.bing.com
-DOMAIN-SUFFIX,th.bing.com

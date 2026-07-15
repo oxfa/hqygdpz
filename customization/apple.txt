@@ -1,15 +1,7 @@
 ## The Comment Should Use ##
 # ADD
-## Apple Services
-DOMAIN,ocsp.digicert.com
-DOMAIN,crl3.digicert.com
-DOMAIN,crl4.digicert.com
-DOMAIN,cp4.cloudflare.com
-## DOMAIN,apple-relay.apple.com
-DOMAIN,apple-relay.cloudflare.com
-DOMAIN,apple-relay.fastly-edge.com
-DOMAIN,ohttp-relay1.fastly-edge.com
-DOMAIN,appldnld.apple.com.edgesuite.net
+## Apple Service Domains
+## https://support.apple.com/en-us/101555
 DOMAIN-SUFFIX,apple
 DOMAIN-SUFFIX,apple.cn
 DOMAIN-SUFFIX,apple.com
@@ -26,14 +18,19 @@ DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,applemusic.com
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple-livephotoskit.com
+DOMAIN-SUFFIX,axm-usercontent-apple.com
+DOMAIN-SUFFIX,appleschoolcontent.com
+DOMAIN-SUFFIX,vertexsmb.com
 DOMAIN-SUFFIX,apzones.com
-DOMAIN-SUFFIX,akadns.net
-DOMAIN-SUFFIX,akamai.net
-DOMAIN-SUFFIX,akamaiedge.net
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,mzstatic.com
-DOMAIN-SUFFIX,edgekey.net
-DOMAIN-SUFFIX,mzstatic.com
+### akamai cdn
+# DOMAIN-SUFFIX,akadns.net
+# DOMAIN-SUFFIX,akamai.net
+# DOMAIN-SUFFIX,akamaiedge.net
+# DOMAIN-SUFFIX,edgekey.net
+# DOMAIN-SUFFIX,edgesuite.net
+## Apple Service IP Ranges
 IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,2403:300::/32,no-resolve
 IP-CIDR,2620:149::/32,no-resolve

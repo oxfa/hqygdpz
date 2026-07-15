@@ -1,11 +1,7 @@
 ## The Comment Should Use ##
 # ADD
-DOMAIN,nic.eu.org
-DOMAIN-SUFFIX,momot.rs
-DOMAIN-SUFFIX,libgen.li
-DOMAIN-SUFFIX,booksdl.lc
-DOMAIN-SUFFIX,debian.org
-DOMAIN-SUFFIX,ipqualityscore.com
+## apple
+time-ios.apple.com
 ## blizzard battle net
 DOMAIN-SUFFIX,battle.net
 DOMAIN-SUFFIX,blizzard.com
@@ -13,4 +9,11 @@ DOMAIN-SUFFIX,blzprofile.akamaized.net
 DOMAIN-SUFFIX,blz-contentstack-assets.akamaized.net
 DOMAIN-SUFFIX,blz-contentstack-images.akamaized.net
 DOMAIN-SUFFIX,d9qcypg7o58bv.cloudfront.net
+## others
+DOMAIN,nic.eu.org
+DOMAIN-SUFFIX,momot.rs
+DOMAIN-SUFFIX,libgen.li
+DOMAIN-SUFFIX,booksdl.lc
+DOMAIN-SUFFIX,debian.org
+DOMAIN-SUFFIX,ipqualityscore.com
 # REMOVE

@@ -1,0 +1,9 @@
+## The Comment Should Use ##
+# ADD
+## Apple Service Domains ONLY Support UDP
+## https://support.apple.com/en-us/101555
+DOMAIN,time.apple.com
+DOMAIN,time-ios.apple.com
+DOMAIN,time-macos.apple.com
+DOMAIN,mask.icloud.com
+# REMOVE
