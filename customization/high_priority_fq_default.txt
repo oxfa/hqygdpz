@@ -1,7 +1,5 @@
 ## The Comment Should Use ##
 # ADD
-## apple
-time-ios.apple.com
 ## blizzard battle net
 DOMAIN-SUFFIX,battle.net
 DOMAIN-SUFFIX,blizzard.com
