@@ -2179,6 +2179,7 @@ payload:
   - DOMAIN-SUFFIX,2f.com
   - DOMAIN-SUFFIX,2gdt.com
   - DOMAIN-SUFFIX,2gei.com
+  - DOMAIN-SUFFIX,2google.com
   - DOMAIN-SUFFIX,2haha.com
   - DOMAIN-SUFFIX,2handsmt.com
   - DOMAIN-SUFFIX,2haohr.com
@@ -7282,9 +7283,7 @@ payload:
   - DOMAIN-SUFFIX,ak1ak1.com
   - DOMAIN-SUFFIX,aka700.com
   - DOMAIN-SUFFIX,aka700.net
-  - DOMAIN-SUFFIX,akadns99.net
   - DOMAIN-SUFFIX,akailibrary.com
-  - DOMAIN-SUFFIX,akamai.com
   - DOMAIN-SUFFIX,akashic.cc
   - DOMAIN-SUFFIX,akbchina.com
   - DOMAIN-SUFFIX,akbing.com
@@ -10857,8 +10856,6 @@ payload:
   - DOMAIN-SUFFIX,binfenshikong.com
   - DOMAIN-SUFFIX,binfenyeke.com
   - DOMAIN-SUFFIX,binfenyingyu.com
-  - DOMAIN-SUFFIX,bing.com
-  - DOMAIN-SUFFIX,bing.net
   - DOMAIN-SUFFIX,bing400.com
   - DOMAIN-SUFFIX,bingchenvacuum.com
   - DOMAIN-SUFFIX,bingd.com
@@ -10869,7 +10866,6 @@ payload:
   - DOMAIN-SUFFIX,bingganqy.com
   - DOMAIN-SUFFIX,binggo.com
   - DOMAIN-SUFFIX,binghelengmei.com
-  - DOMAIN-SUFFIX,bingj.com
   - DOMAIN-SUFFIX,bingjo.com
   - DOMAIN-SUFFIX,binglai.net
   - DOMAIN-SUFFIX,binglanggu.com
@@ -13831,7 +13827,6 @@ payload:
   - DOMAIN-SUFFIX,cdndoctor.com
   - DOMAIN-SUFFIX,cdnet110.com
   - DOMAIN-SUFFIX,cdnetdns.net
-  - DOMAIN-SUFFIX,cdnetworks.com
   - DOMAIN-SUFFIX,cdnetworks.net
   - DOMAIN-SUFFIX,cdnexus.com
   - DOMAIN-SUFFIX,cdngc.net
@@ -22320,6 +22315,7 @@ payload:
   - DOMAIN-SUFFIX,drugfuture.com
   - DOMAIN-SUFFIX,druggcp.net
   - DOMAIN-SUFFIX,drughk.com
+  - DOMAIN-SUFFIX,drugoogle.com
   - DOMAIN-SUFFIX,druid.vip
   - DOMAIN-SUFFIX,drvceo.com
   - DOMAIN-SUFFIX,drvsky.com
@@ -25005,7 +25001,6 @@ payload:
   - DOMAIN-SUFFIX,fareastcontainers.com
   - DOMAIN-SUFFIX,farenhui.com
   - DOMAIN-SUFFIX,farennews.com
-  - DOMAIN-SUFFIX,farfetch-contents.com
   - DOMAIN-SUFFIX,farfir.com
   - DOMAIN-SUFFIX,farmasino.com
   - DOMAIN-SUFFIX,farmkd.com
@@ -28987,6 +28982,9 @@ payload:
   - DOMAIN-SUFFIX,goodyoungtea.com
   - DOMAIN-SUFFIX,goofish.com
   - DOMAIN-SUFFIX,goofish.pro
+  - DOMAIN-SUFFIX,google-hub.com
+  - DOMAIN-SUFFIX,googlebbs.net
+  - DOMAIN-SUFFIX,googlenav.com
   - DOMAIN-SUFFIX,googoc.com
   - DOMAIN-SUFFIX,googol-power.com
   - DOMAIN-SUFFIX,googolpark.com
@@ -47844,7 +47842,6 @@ payload:
   - DOMAIN-SUFFIX,livanauto.com
   - DOMAIN-SUFFIX,live-helps.com
   - DOMAIN-SUFFIX,live-voip.com
-  - DOMAIN-SUFFIX,live.com
   - DOMAIN-SUFFIX,live800.com
   - DOMAIN-SUFFIX,livecdnstatic.com
   - DOMAIN-SUFFIX,livechina.com
@@ -54902,7 +54899,6 @@ payload:
   - DOMAIN-SUFFIX,offerpluscn.com
   - DOMAIN-SUFFIX,offersloc.com
   - DOMAIN-SUFFIX,office-cn.net
-  - DOMAIN-SUFFIX,office.net
   - DOMAIN-SUFFIX,office68.com
   - DOMAIN-SUFFIX,office8hour.com
   - DOMAIN-SUFFIX,officeaid.com
@@ -75181,9 +75177,7 @@ payload:
   - DOMAIN-SUFFIX,windin.com
   - DOMAIN-SUFFIX,windoor168.com
   - DOMAIN-SUFFIX,windows10.pro
-  - DOMAIN-SUFFIX,windowssearch.com
   - DOMAIN-SUFFIX,windowstool.net
-  - DOMAIN-SUFFIX,windowsupdate.com
   - DOMAIN-SUFFIX,windpayer.com
   - DOMAIN-SUFFIX,winds.red
   - DOMAIN-SUFFIX,windsbridge.com

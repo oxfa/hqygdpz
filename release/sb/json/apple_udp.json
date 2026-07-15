@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "time.apple.com",
+        "time-macos.apple.com",
+        "mask.icloud.com",
+        "time-ios.apple.com"
+      ]
+    }
+  ],
+  "version": 3
+}

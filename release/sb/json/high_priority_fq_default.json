@@ -6,16 +6,16 @@
       ],
       "domain_suffix": [
         ".blizzard.com",
-        ".libgen.li",
-        ".ipqualityscore.com",
-        ".debian.org",
-        ".booksdl.lc",
-        ".momot.rs",
         ".blz-contentstack-assets.akamaized.net",
-        ".blzprofile.akamaized.net",
-        ".battle.net",
         ".blz-contentstack-images.akamaized.net",
-        ".d9qcypg7o58bv.cloudfront.net"
+        ".battle.net",
+        ".ipqualityscore.com",
+        ".libgen.li",
+        ".d9qcypg7o58bv.cloudfront.net",
+        ".momot.rs",
+        ".blzprofile.akamaized.net",
+        ".booksdl.lc",
+        ".debian.org"
       ]
     }
   ],
