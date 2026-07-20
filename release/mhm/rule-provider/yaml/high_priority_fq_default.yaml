@@ -6,6 +6,7 @@ payload:
   - DOMAIN-SUFFIX,blz-contentstack-images.akamaized.net
   - DOMAIN-SUFFIX,d9qcypg7o58bv.cloudfront.net
   - DOMAIN,nic.eu.org
+  - DOMAIN-SUFFIX,duck.ai
   - DOMAIN-SUFFIX,momot.rs
   - DOMAIN-SUFFIX,libgen.li
   - DOMAIN-SUFFIX,booksdl.lc
