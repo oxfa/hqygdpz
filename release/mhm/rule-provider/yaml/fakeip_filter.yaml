@@ -16,6 +16,8 @@ payload:
   - 'time.*.apple.com'
   - 'time-ios.apple.com'
   - 'time-macos.apple.com'
+  - 'time.g.aaplimg.com'
+  - 'time-osx.g.aaplimg.com'
   - 'time1.*.com'
   - 'time2.*.com'
   - 'time3.*.com'
