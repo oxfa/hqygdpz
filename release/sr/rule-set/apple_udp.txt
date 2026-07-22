@@ -2,3 +2,5 @@ DOMAIN,mask.icloud.com
 DOMAIN,time-ios.apple.com
 DOMAIN,time-macos.apple.com
 DOMAIN,time.apple.com
+DOMAIN,time.g.aaplimg.com
+DOMAIN,time-osx.g.aaplimg.com
