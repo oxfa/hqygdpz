@@ -46,8 +46,8 @@ jobs:
       # RAW_RULESET_BLOCK_URL:              https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/refs/heads/master/anti-ad-surge.txt
       RAW_RULESET_BLOCKHTTPDNS_URL:       https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.list
       # RAW_RULESET_ASN_DROP_URL:           https://www.spamhaus.org/drop/asndrop.json
-      RAW_RULESET_IPV4_DROP_URL:          https://www.spamhaus.org/drop/drop_v4.json
-      RAW_RULESET_IPV6_DROP_URL:          https://www.spamhaus.org/drop/drop_v6.json
+      RAW_RULESET_DROP_IPV4_URL:          https://www.spamhaus.org/drop/drop_v4.json
+      RAW_RULESET_DROP_IPV6_URL:          https://www.spamhaus.org/drop/drop_v6.json
 
       # DIRECT RULES
       # RAW_RULESET_DIRECT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
@@ -56,6 +56,9 @@ jobs:
       # RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/direct.txt
       RAW_RULESET_DIRECT_DOMAIN_URL:      https://is.gd/u3iBWF
       # RAW_RULESET_DIRECT_DOMAIN_URL:      https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/refs/heads/master/accelerated-domains.china.conf
+
+      # OTHER RULES
+      RAW_RULESET_REDDIT_URL:             https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Reddit/Reddit.list
 
     steps:
       - name: Checkout the "master" branch of this repo
@@ -107,13 +110,16 @@ jobs:
 
           # Download Block Rules
           touch $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt
-          curl -sSL ${{ env.RAW_RULESET_IPV4_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV4_DROP_URL }} Failed!" && exit 1)
-          curl -sSL ${{ env.RAW_RULESET_IPV6_DROP_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_IPV6_DROP_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_DROP_IPV4_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DROP_IPV4_URL }} Failed!" && exit 1)
+          curl -sSL ${{ env.RAW_RULESET_DROP_IPV6_URL }} | sed -nE 's/\{"cidr":"([^"]+)".*/\1/p' | python3 $GITHUB_WORKSPACE/script/merge_ip_addr.py | sed -E -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' >> $GITHUB_WORKSPACE/tmp/block_drop_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_DROP_IPV6_URL }} Failed!" && exit 1)
           touch $GITHUB_WORKSPACE/tmp/block_ruleset.txt
           # curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
-          curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX,/' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1) 
+          curl -sSL ${{ env.RAW_RULESET_BLOCK_URL }} | sed -E -e '/^$/d; /^[[:space:]]*$/d; /^[[:space:]]*#/d' -e 's/^/DOMAIN-SUFFIX,/' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCK_URL }} Failed!" && exit 1)
           ## Make BLOCKHTTPDNS optional
           # curl -sSL ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} | sed 's/IP-CIDR6/IP-CIDR/g' >> $GITHUB_WORKSPACE/tmp/block_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_BLOCKHTTPDNS_URL }} Failed!" && exit 1)
+
+          # Download Other Rules
+          curl -sSL ${{ env.RAW_RULESET_REDDIT_URL }} > $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt || (echo "Download ${{ env.RAW_RULESET_REDDIT_URL }} Failed!" && exit 1)
 
       - name: Process Apple Rules
         run: |
@@ -147,23 +153,26 @@ jobs:
           echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt
           echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp2.txt
           echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt
+          echo "" > $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp_default.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt -p $GITHUB_WORKSPACE/customization/high_priority_direct.txt
           sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_direct.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_direct.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_direct.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq1.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq1.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq2.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq3.txt
-          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq_default.txt
-
           sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq1.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq1.yaml
-          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq2.yaml
-          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq3.yaml
-          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq_default.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq1.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq1.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq2.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq2.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq2.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq2.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq3.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq3.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq3.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq3.txt
+
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt -p $GITHUB_WORKSPACE/customization/high_priority_fq_default.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_fq_default.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_fq_default.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_fq_default.txt
 
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp1.txt -p $GITHUB_WORKSPACE/customization/high_priority_warp1.txt
@@ -177,6 +186,11 @@ jobs:
           python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt -p $GITHUB_WORKSPACE/customization/high_priority_warp3.txt
           sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp3.yaml
           sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp3.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp3.txt
+
+          cat $GITHUB_WORKSPACE/tmp/reddit_ruleset.txt >> $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp_default.txt
+          python3 $GITHUB_WORKSPACE/script/customize_ruleset.py -m add_and_remove -i $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp_default.txt -p $GITHUB_WORKSPACE/customization/high_priority_warp_default.txt
+          sed -e 's/^/  - /' -e '1i\payload:' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp_default.txt > $GITHUB_WORKSPACE/release/mhm/rule-provider/yaml/high_priority_warp_default.yaml
+          sed -e 's/DOMAIN-REGEX/URL-REGEX/' $GITHUB_WORKSPACE/release/mhm/rule-provider/txt/high_priority_warp_default.txt > $GITHUB_WORKSPACE/release/sr/rule-set/high_priority_warp_default.txt
 
       - name: Process LAN Domain Rules
         run: |
