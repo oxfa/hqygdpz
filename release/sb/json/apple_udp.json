@@ -2,8 +2,8 @@
   "rules": [
     {
       "domain": [
-        "mask.icloud.com",
         "time.apple.com",
+        "mask.icloud.com",
         "time-macos.apple.com",
         "time-ios.apple.com"
       ]

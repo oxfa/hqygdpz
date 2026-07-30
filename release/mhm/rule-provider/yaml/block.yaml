@@ -6445,6 +6445,7 @@ payload:
   - DOMAIN-SUFFIX,ads-static.conde.digital
   - DOMAIN-SUFFIX,ads-static.xhscdn.com
   - DOMAIN-SUFFIX,ads-tracking.collectiveaudience.co
+  - DOMAIN-SUFFIX,ads-trk.vidible.tv
   - DOMAIN-SUFFIX,ads-twitter.com
   - DOMAIN-SUFFIX,ads-union.jd.com
   - DOMAIN-SUFFIX,ads-uo.api.leiniao.com
@@ -28253,6 +28254,7 @@ payload:
   - DOMAIN-SUFFIX,estadisticasgratis.com
   - DOMAIN-SUFFIX,estadonline.publiguias.cl
   - DOMAIN-SUFFIX,estara.com
+  - DOMAIN-SUFFIX,estat.com
   - DOMAIN-SUFFIX,estatueofthea.info
   - DOMAIN-SUFFIX,esteemed-laugh.pro
   - DOMAIN-SUFFIX,esteemfurytooth.com
@@ -43359,6 +43361,7 @@ payload:
   - DOMAIN-SUFFIX,kxbqbq.amicafarmacia.com
   - DOMAIN-SUFFIX,kxcpsknpsodie.space
   - DOMAIN-SUFFIX,kxdnxsjlxp.com
+  - DOMAIN-SUFFIX,kxencag.com
   - DOMAIN-SUFFIX,kxewpz.com
   - DOMAIN-SUFFIX,kxexlhdbaosee.website
   - DOMAIN-SUFFIX,kxfnuquwjicjt.site
