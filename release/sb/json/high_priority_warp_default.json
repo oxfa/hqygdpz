@@ -3,13 +3,13 @@
     {
       "domain_suffix": [
         ".redditstatic.com",
-        ".reddit.com",
-        ".reddituploads.com",
         ".reddituploads.com.cdn-cf.dropbox.com",
+        ".reddituploads.com.cdn-cf.behance.net",
         ".redditmedia.com",
         ".redditmail.com",
         ".redd.it",
-        ".reddituploads.com.cdn-cf.behance.net"
+        ".reddituploads.com",
+        ".reddit.com"
       ]
     }
   ],
