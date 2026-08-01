@@ -382,7 +382,6 @@ payload:
   - IP-CIDR,160.14.0.0/16,no-resolve
   - IP-CIDR,160.180.0.0/16,no-resolve
   - IP-CIDR,160.188.0.0/16,no-resolve
-  - IP-CIDR,160.21.0.0/16,no-resolve
   - IP-CIDR,160.240.0.0/16,no-resolve
   - IP-CIDR,160.65.0.0/16,no-resolve
   - IP-CIDR,161.0.0.0/19,no-resolve
