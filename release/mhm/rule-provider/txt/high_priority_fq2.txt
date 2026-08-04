@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,mcc314.pub.3gppnetwork.org
 DOMAIN-SUFFIX,mcc315.pub.3gppnetwork.org
 DOMAIN-SUFFIX,mcc316.pub.3gppnetwork.org
 DOMAIN,tmobilees.mpeasylink.com
+DOMAIN,fp-us-tmobile.rcs.telephony.goog
 DOMAIN-SUFFIX,t-esim.us
 DOMAIN-SUFFIX,tmobile.com
 DOMAIN-SUFFIX,t-mobile.com
