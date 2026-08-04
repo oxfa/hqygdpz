@@ -2,33 +2,33 @@
   "rules": [
     {
       "domain_suffix": [
-        ".apple-cloudkit.com",
-        ".apple-mapkit.com",
-        ".vertexsmb.com",
-        ".mzstatic.com",
-        ".applemusic.com",
-        ".icloud.com",
-        ".apple",
-        ".apple-dns.net",
-        ".mac.com",
-        ".itunes.com",
-        ".cdn-apple.com",
-        ".apple.com",
-        ".apple-livephotoskit.com",
         ".apple.com.cn",
-        ".apzones.com",
+        ".applemusic.com",
         ".icloud-content.com",
-        ".apple.cn",
+        ".icloud.com.cn",
         ".aaplimg.com",
-        ".appleschoolcontent.com",
-        ".axm-usercontent-apple.com",
+        ".cdn-apple.com",
+        ".itunes.com",
+        ".apple",
+        ".apple-cloudkit.com",
         ".me.com",
-        ".icloud.com.cn"
+        ".mzstatic.com",
+        ".mac.com",
+        ".axm-usercontent-apple.com",
+        ".apple-dns.net",
+        ".vertexsmb.com",
+        ".apzones.com",
+        ".appleschoolcontent.com",
+        ".apple-livephotoskit.com",
+        ".apple-mapkit.com",
+        ".apple.cn",
+        ".icloud.com",
+        ".apple.com"
       ],
       "ip_cidr": [
         "2620:149::/32",
-        "2a01:b740::/32",
         "17.0.0.0/8",
+        "2a01:b740::/32",
         "2403:300::/32"
       ]
     }
