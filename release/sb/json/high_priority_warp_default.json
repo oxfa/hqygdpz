@@ -4,11 +4,11 @@
       "domain_suffix": [
         ".redditmail.com",
         ".reddituploads.com",
-        ".reddit.com",
-        ".redditmedia.com",
-        ".reddituploads.com.cdn-cf.behance.net",
-        ".redd.it",
         ".redditstatic.com",
+        ".redd.it",
+        ".reddit.com",
+        ".reddituploads.com.cdn-cf.behance.net",
+        ".redditmedia.com",
         ".reddituploads.com.cdn-cf.dropbox.com"
       ]
     }
