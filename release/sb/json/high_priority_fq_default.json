@@ -6,16 +6,16 @@
       ],
       "domain_suffix": [
         ".duck.ai",
-        ".blizzard.com",
-        ".d9qcypg7o58bv.cloudfront.net",
         ".blzprofile.akamaized.net",
         ".battle.net",
-        ".libgen.li",
-        ".debian.org",
-        ".booksdl.lc",
+        ".momot.rs",
         ".blz-contentstack-images.akamaized.net",
+        ".d9qcypg7o58bv.cloudfront.net",
+        ".debian.org",
+        ".libgen.li",
+        ".blizzard.com",
         ".blz-contentstack-assets.akamaized.net",
-        ".momot.rs"
+        ".booksdl.lc"
       ]
     }
   ],
