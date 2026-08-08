@@ -665,6 +665,7 @@ payload:
   - IP-CIDR,193.142.146.0/23,no-resolve
   - IP-CIDR,193.143.1.0/24,no-resolve
   - IP-CIDR,193.169.194.0/23,no-resolve
+  - IP-CIDR,193.178.158.0/24,no-resolve
   - IP-CIDR,193.202.82.0/23,no-resolve
   - IP-CIDR,193.221.200.0/23,no-resolve
   - IP-CIDR,193.226.76.0/24,no-resolve
