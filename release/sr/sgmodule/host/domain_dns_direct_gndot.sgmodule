@@ -70432,7 +70432,6 @@ stun.voipstunt.com = server:tls://223.5.5.5
 *.tomson-group.com = server:tls://223.5.5.5
 *.tomson-riviera.com = server:tls://223.5.5.5
 *.tomwx.net = server:tls://223.5.5.5
-*.ton51.com = server:tls://223.5.5.5
 *.tonebj.com = server:tls://223.5.5.5
 *.tonehk.com = server:tls://223.5.5.5
 *.tonewinner.com = server:tls://223.5.5.5
