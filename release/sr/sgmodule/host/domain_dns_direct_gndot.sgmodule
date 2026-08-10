@@ -30312,6 +30312,7 @@ stun.voipstunt.com = server:tls://223.5.5.5
 *.gxdlzl.com = server:tls://223.5.5.5
 *.gxdmds.com = server:tls://223.5.5.5
 *.gxdmsq.com = server:tls://223.5.5.5
+*.gxdmtrade.com = server:tls://223.5.5.5
 *.gxdna.com = server:tls://223.5.5.5
 *.gxdnu.com = server:tls://223.5.5.5
 *.gxdong.com = server:tls://223.5.5.5
