@@ -20580,6 +20580,7 @@ DOMAIN-SUFFIX,de-tencentclb.work
 DOMAIN-SUFFIX,de0.cc
 DOMAIN-SUFFIX,de1000.com
 DOMAIN-SUFFIX,de123.net
+DOMAIN-SUFFIX,de1919.com
 DOMAIN-SUFFIX,deadnine.com
 DOMAIN-SUFFIX,deafchina.com
 DOMAIN-SUFFIX,deahu.com
@@ -29277,6 +29278,7 @@ DOMAIN-SUFFIX,grmxdy.com
 DOMAIN-SUFFIX,grnuo.com
 DOMAIN-SUFFIX,groad.net
 DOMAIN-SUFFIX,groovymedicine.com
+DOMAIN-SUFFIX,grouk.com
 DOMAIN-SUFFIX,groundsun.com
 DOMAIN-SUFFIX,group-purchasing.com
 DOMAIN-SUFFIX,group-spl.com
@@ -55638,7 +55640,6 @@ DOMAIN-SUFFIX,p2peye.com
 DOMAIN-SUFFIX,p5w.net
 DOMAIN-SUFFIX,p6air.com
 DOMAIN-SUFFIX,p6sai.com
-DOMAIN-SUFFIX,p8.ink
 DOMAIN-SUFFIX,p8games.com
 DOMAIN-SUFFIX,pa18.com
 DOMAIN-SUFFIX,pa1pa.com
