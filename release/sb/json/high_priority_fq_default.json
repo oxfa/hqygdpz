@@ -5,17 +5,17 @@
         "nic.eu.org"
       ],
       "domain_suffix": [
-        ".battle.net",
-        ".debian.org",
         ".booksdl.lc",
-        ".blz-contentstack-assets.akamaized.net",
-        ".duck.ai",
-        ".blzprofile.akamaized.net",
-        ".blizzard.com",
-        ".blz-contentstack-images.akamaized.net",
-        ".momot.rs",
+        ".d9qcypg7o58bv.cloudfront.net",
         ".libgen.li",
-        ".d9qcypg7o58bv.cloudfront.net"
+        ".debian.org",
+        ".momot.rs",
+        ".blizzard.com",
+        ".duck.ai",
+        ".blz-contentstack-images.akamaized.net",
+        ".battle.net",
+        ".blz-contentstack-assets.akamaized.net",
+        ".blzprofile.akamaized.net"
       ]
     }
   ],
