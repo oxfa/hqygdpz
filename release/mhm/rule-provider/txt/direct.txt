@@ -6660,6 +6660,7 @@ DOMAIN-SUFFIX,ahjszls.com
 DOMAIN-SUFFIX,ahjtxx.com
 DOMAIN-SUFFIX,ahjyec.com
 DOMAIN-SUFFIX,ahjzjy.com
+DOMAIN-SUFFIX,ahjzw.com
 DOMAIN-SUFFIX,ahjzzs.com
 DOMAIN-SUFFIX,ahkds.com
 DOMAIN-SUFFIX,ahkemi.com
@@ -17964,6 +17965,7 @@ DOMAIN-SUFFIX,coomix.net
 DOMAIN-SUFFIX,coomo99.com
 DOMAIN-SUFFIX,coomodel.com
 DOMAIN-SUFFIX,coonote.com
+DOMAIN-SUFFIX,cooole.com
 DOMAIN-SUFFIX,coooolfan.com
 DOMAIN-SUFFIX,coopcc.com
 DOMAIN-SUFFIX,cooperningbo.com
@@ -40998,6 +41000,7 @@ DOMAIN-SUFFIX,jiangsugqt.org
 DOMAIN-SUFFIX,jiangsugwy.org
 DOMAIN-SUFFIX,jiangsukj.com
 DOMAIN-SUFFIX,jiangsulvhe.com
+DOMAIN-SUFFIX,jiangsurc.com
 DOMAIN-SUFFIX,jiangsurhi.com
 DOMAIN-SUFFIX,jiangsusx.com
 DOMAIN-SUFFIX,jiangtai.com
@@ -88493,7 +88496,7 @@ IP-CIDR,103.144.136.0/23,no-resolve
 IP-CIDR,103.144.148.0/23,no-resolve
 IP-CIDR,103.144.158.0/23,no-resolve
 IP-CIDR,103.144.240.0/23,no-resolve
-IP-CIDR,103.144.244.0/24,no-resolve
+IP-CIDR,103.144.244.0/23,no-resolve
 IP-CIDR,103.144.40.0/23,no-resolve
 IP-CIDR,103.144.52.0/23,no-resolve
 IP-CIDR,103.144.66.0/23,no-resolve
@@ -91642,7 +91645,7 @@ IP-CIDR,156.109.34.4/30,no-resolve
 IP-CIDR,156.154.62.0/23,no-resolve
 IP-CIDR,156.224.128.0/17,no-resolve
 IP-CIDR,156.227.239.0/24,no-resolve
-IP-CIDR,156.232.10.0/23,no-resolve
+IP-CIDR,156.232.11.0/24,no-resolve
 IP-CIDR,156.232.9.0/24,no-resolve
 IP-CIDR,156.251.144.0/20,no-resolve
 IP-CIDR,156.251.161.0/24,no-resolve
@@ -98068,6 +98071,7 @@ IP-CIDR,38.181.36.0/22,no-resolve
 IP-CIDR,38.181.40.0/21,no-resolve
 IP-CIDR,38.181.48.0/20,no-resolve
 IP-CIDR,38.196.176.0/24,no-resolve
+IP-CIDR,38.226.199.0/24,no-resolve
 IP-CIDR,38.47.192.0/20,no-resolve
 IP-CIDR,38.47.208.0/21,no-resolve
 IP-CIDR,38.47.216.0/22,no-resolve
