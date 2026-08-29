@@ -2,13 +2,13 @@
   "rules": [
     {
       "domain_suffix": [
+        ".redditstatic.com",
+        ".redditmedia.com",
+        ".reddituploads.com",
         ".redd.it",
+        ".reddit.com",
         ".reddituploads.com.cdn-cf.behance.net",
         ".reddituploads.com.cdn-cf.dropbox.com",
-        ".redditstatic.com",
-        ".reddituploads.com",
-        ".redditmedia.com",
-        ".reddit.com",
         ".redditmail.com"
       ]
     }
