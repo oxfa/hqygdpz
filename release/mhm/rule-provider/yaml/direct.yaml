@@ -21065,6 +21065,7 @@ payload:
   - DOMAIN-SUFFIX,dgjwsy.com
   - DOMAIN-SUFFIX,dgjx.net
   - DOMAIN-SUFFIX,dgjxmk.com
+  - DOMAIN-SUFFIX,dgjy.net
   - DOMAIN-SUFFIX,dgkj888.com
   - DOMAIN-SUFFIX,dglpool.com
   - DOMAIN-SUFFIX,dglzd.com
@@ -24876,7 +24877,6 @@ payload:
   - DOMAIN-SUFFIX,faiww.com
   - DOMAIN-SUFFIX,fajiayun.com
   - DOMAIN-SUFFIX,fajihao.com
-  - DOMAIN-SUFFIX,faka.it
   - DOMAIN-SUFFIX,fakamiao.com
   - DOMAIN-SUFFIX,fakamiao.shop
   - DOMAIN-SUFFIX,falconsending.com
@@ -37659,6 +37659,7 @@ payload:
   - DOMAIN-SUFFIX,hyhqjt.com
   - DOMAIN-SUFFIX,hyhro.com
   - DOMAIN-SUFFIX,hyhscm.com
+  - DOMAIN-SUFFIX,hyhudong.com
   - DOMAIN-SUFFIX,hyhuo.com
   - DOMAIN-SUFFIX,hyhxt.net
   - DOMAIN-SUFFIX,hyhy.cc
@@ -49297,6 +49298,7 @@ payload:
   - DOMAIN-SUFFIX,lygsgt.com
   - DOMAIN-SUFFIX,lygshjd.com
   - DOMAIN-SUFFIX,lygshlxh.com
+  - DOMAIN-SUFFIX,lygtylk.com
   - DOMAIN-SUFFIX,lygxwmarathon.com
   - DOMAIN-SUFFIX,lygxwxqrmyy.com
   - DOMAIN-SUFFIX,lygyyjt.com
@@ -50385,6 +50387,7 @@ payload:
   - DOMAIN-SUFFIX,mediav.com
   - DOMAIN-SUFFIX,mediaxinan.com
   - DOMAIN-SUFFIX,medical-union.com
+  - DOMAIN-SUFFIX,medicalimagecloud.com
   - DOMAIN-SUFFIX,medicalqc.com
   - DOMAIN-SUFFIX,medicexam.net
   - DOMAIN-SUFFIX,mediecogroup.com
@@ -54593,6 +54596,7 @@ payload:
   - DOMAIN-SUFFIX,nordkete.com
   - DOMAIN-SUFFIX,nordonfire.com
   - DOMAIN-SUFFIX,nordritools.com
+  - DOMAIN-SUFFIX,norglo.com
   - DOMAIN-SUFFIX,norinco-vehicle.com
   - DOMAIN-SUFFIX,norinco.com
   - DOMAIN-SUFFIX,norincogroup-ebuy.com
@@ -55080,7 +55084,6 @@ payload:
   - DOMAIN-SUFFIX,octopusgame.com
   - DOMAIN-SUFFIX,octsszj.com
   - DOMAIN-SUFFIX,octsunshine.com
-  - DOMAIN-SUFFIX,oculist.net
   - DOMAIN-SUFFIX,ocwms.com
   - DOMAIN-SUFFIX,odaily.news
   - DOMAIN-SUFFIX,odalong.com
@@ -61918,7 +61921,6 @@ payload:
   - DOMAIN-SUFFIX,sd-jnyz.com
   - DOMAIN-SUFFIX,sd-nand.com
   - DOMAIN-SUFFIX,sd-port.com
-  - DOMAIN-SUFFIX,sd-portfh.com
   - DOMAIN-SUFFIX,sd-rtn.com
   - DOMAIN-SUFFIX,sd-sangte.com
   - DOMAIN-SUFFIX,sd-sanju.com
@@ -75252,6 +75254,7 @@ payload:
   - DOMAIN-SUFFIX,whjuren.com
   - DOMAIN-SUFFIX,whjxbaby.com
   - DOMAIN-SUFFIX,whjy.net
+  - DOMAIN-SUFFIX,whjyapp.com
   - DOMAIN-SUFFIX,whjyx.com
   - DOMAIN-SUFFIX,whjyxh.com
   - DOMAIN-SUFFIX,whjzxh.com
@@ -86161,6 +86164,7 @@ payload:
   - DOMAIN-SUFFIX,zhuanhuamao.com
   - DOMAIN-SUFFIX,zhuaniao.com
   - DOMAIN-SUFFIX,zhuaninc.com
+  - DOMAIN-SUFFIX,zhuankeapp.com
   - DOMAIN-SUFFIX,zhuanliqiao.com
   - DOMAIN-SUFFIX,zhuanmenmian.com
   - DOMAIN-SUFFIX,zhuanpinyin.com
@@ -91809,6 +91813,7 @@ payload:
   - IP-CIDR,132.237.134.0/24,no-resolve
   - IP-CIDR,133.226.32.0/20,no-resolve
   - IP-CIDR,134.175.0.0/16,no-resolve
+  - IP-CIDR,134.49.240.0/22,no-resolve
   - IP-CIDR,134.73.240.0/20,no-resolve
   - IP-CIDR,134.75.107.10/31,no-resolve
   - IP-CIDR,134.75.107.14/31,no-resolve
@@ -92377,6 +92382,7 @@ payload:
   - IP-CIDR,163.244.246.0/24,no-resolve
   - IP-CIDR,163.47.4.0/22,no-resolve
   - IP-CIDR,163.52.28.0/23,no-resolve
+  - IP-CIDR,163.52.76.0/23,no-resolve
   - IP-CIDR,163.53.0.0/20,no-resolve
   - IP-CIDR,163.53.128.0/21,no-resolve
   - IP-CIDR,163.53.136.0/22,no-resolve
@@ -92756,9 +92762,11 @@ payload:
   - IP-CIDR,185.109.236.0/24,no-resolve
   - IP-CIDR,185.175.100.0/22,no-resolve
   - IP-CIDR,185.183.84.0/24,no-resolve
+  - IP-CIDR,185.192.56.0/22,no-resolve
   - IP-CIDR,185.194.148.0/24,no-resolve
   - IP-CIDR,185.196.210.68/30,no-resolve
   - IP-CIDR,185.196.211.68/30,no-resolve
+  - IP-CIDR,185.2.48.0/24,no-resolve
   - IP-CIDR,185.2.51.0/24,no-resolve
   - IP-CIDR,185.201.226.0/23,no-resolve
   - IP-CIDR,185.203.36.0/22,no-resolve
@@ -93323,7 +93331,9 @@ payload:
   - IP-CIDR,202.55.0.0/23,no-resolve
   - IP-CIDR,202.55.18.0/23,no-resolve
   - IP-CIDR,202.55.20.0/22,no-resolve
-  - IP-CIDR,202.55.24.0/21,no-resolve
+  - IP-CIDR,202.55.24.0/22,no-resolve
+  - IP-CIDR,202.55.28.0/23,no-resolve
+  - IP-CIDR,202.55.31.0/24,no-resolve
   - IP-CIDR,202.55.4.0/24,no-resolve
   - IP-CIDR,202.57.192.0/20,no-resolve
   - IP-CIDR,202.57.212.0/22,no-resolve
@@ -94397,7 +94407,6 @@ payload:
   - IP-CIDR,203.8.220.0/24,no-resolve
   - IP-CIDR,203.8.23.0/24,no-resolve
   - IP-CIDR,203.8.25.0/24,no-resolve
-  - IP-CIDR,203.8.30.0/24,no-resolve
   - IP-CIDR,203.8.70.0/24,no-resolve
   - IP-CIDR,203.8.8.0/24,no-resolve
   - IP-CIDR,203.8.82.0/24,no-resolve
@@ -94519,8 +94528,6 @@ payload:
   - IP-CIDR,210.26.0.0/15,no-resolve
   - IP-CIDR,210.28.0.0/14,no-resolve
   - IP-CIDR,210.32.0.0/12,no-resolve
-  - IP-CIDR,210.48.140.0/23,no-resolve
-  - IP-CIDR,210.48.142.0/24,no-resolve
   - IP-CIDR,210.5.0.0/19,no-resolve
   - IP-CIDR,210.5.128.0/19,no-resolve
   - IP-CIDR,210.5.56.0/21,no-resolve
@@ -95314,9 +95321,7 @@ payload:
   - IP-CIDR,2401:f860:6::/48,no-resolve
   - IP-CIDR,2401:f860:8000::/33,no-resolve
   - IP-CIDR,2401:f860:800::/37,no-resolve
-  - IP-CIDR,2401:f860:80::/46,no-resolve
-  - IP-CIDR,2401:f860:84::/48,no-resolve
-  - IP-CIDR,2401:f860:86::/47,no-resolve
+  - IP-CIDR,2401:f860:80::/45,no-resolve
   - IP-CIDR,2401:f860:89::/48,no-resolve
   - IP-CIDR,2401:f860:8::/47,no-resolve
   - IP-CIDR,2401:f860:8a::/47,no-resolve
@@ -95509,6 +95514,7 @@ payload:
   - IP-CIDR,2402:7140::/32,no-resolve
   - IP-CIDR,2402:71c0::/32,no-resolve
   - IP-CIDR,2402:7240::/32,no-resolve
+  - IP-CIDR,2402:72a0::/32,no-resolve
   - IP-CIDR,2402:72c0::/32,no-resolve
   - IP-CIDR,2402:7540::/32,no-resolve
   - IP-CIDR,2402:75c0::/32,no-resolve
@@ -97304,7 +97310,6 @@ payload:
   - IP-CIDR,27.98.208.0/20,no-resolve
   - IP-CIDR,27.98.224.0/19,no-resolve
   - IP-CIDR,27.99.128.0/17,no-resolve
-  - IP-CIDR,2804:1e48:9001::/48,no-resolve
   - IP-CIDR,2804:1e48:9002::/48,no-resolve
   - IP-CIDR,2a00:79e0:200:500::/56,no-resolve
   - IP-CIDR,2a00:79e0:ffe5:3a00::/56,no-resolve
@@ -98571,10 +98576,7 @@ payload:
   - IP-CIDR,2a0a:d681:e200::/39,no-resolve
   - IP-CIDR,2a0a:d681:e400::/38,no-resolve
   - IP-CIDR,2a0a:d681:e800::/37,no-resolve
-  - IP-CIDR,2a0a:d681:f000::/37,no-resolve
-  - IP-CIDR,2a0a:d681:f800::/39,no-resolve
-  - IP-CIDR,2a0a:d681:fa00::/40,no-resolve
-  - IP-CIDR,2a0a:d681:fd00::/40,no-resolve
+  - IP-CIDR,2a0a:d681:f000::/36,no-resolve
   - IP-CIDR,2a0a:d682:8000::/34,no-resolve
   - IP-CIDR,2a0a:d682::/33,no-resolve
   - IP-CIDR,2a0a:d682:c000::/36,no-resolve
