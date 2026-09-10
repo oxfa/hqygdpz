@@ -27645,6 +27645,7 @@ DOMAIN-SUFFIX,gdfanhua.com
 DOMAIN-SUFFIX,gdfeiyang.com
 DOMAIN-SUFFIX,gdfenxiao.com
 DOMAIN-SUFFIX,gdfgq.club
+DOMAIN-SUFFIX,gdfjsh.org
 DOMAIN-SUFFIX,gdfplaza.com
 DOMAIN-SUFFIX,gdfs.com
 DOMAIN-SUFFIX,gdfshx.com
@@ -58327,7 +58328,6 @@ DOMAIN-SUFFIX,qimingventures.com
 DOMAIN-SUFFIX,qimingzi.net
 DOMAIN-SUFFIX,qiminzi.com
 DOMAIN-SUFFIX,qimu86.com
-DOMAIN-SUFFIX,qimyu.com
 DOMAIN-SUFFIX,qinbei.com
 DOMAIN-SUFFIX,qinbing.com
 DOMAIN-SUFFIX,qincaigame.com
@@ -61924,6 +61924,7 @@ DOMAIN-SUFFIX,sd-jiuyang.com
 DOMAIN-SUFFIX,sd-jnyz.com
 DOMAIN-SUFFIX,sd-nand.com
 DOMAIN-SUFFIX,sd-port.com
+DOMAIN-SUFFIX,sd-portfh.com
 DOMAIN-SUFFIX,sd-rtn.com
 DOMAIN-SUFFIX,sd-sangte.com
 DOMAIN-SUFFIX,sd-sanju.com
@@ -87077,6 +87078,7 @@ DOMAIN-SUFFIX,zjwandi.com
 DOMAIN-SUFFIX,zjwanma.com
 DOMAIN-SUFFIX,zjwater.com
 DOMAIN-SUFFIX,zjwater.org
+DOMAIN-SUFFIX,zjwcjm.com
 DOMAIN-SUFFIX,zjwcqp.com
 DOMAIN-SUFFIX,zjwebapp.com
 DOMAIN-SUFFIX,zjwentou.com
