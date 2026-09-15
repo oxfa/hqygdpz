@@ -64595,6 +64595,7 @@ payload:
   - DOMAIN-SUFFIX,siia-sh.com
   - DOMAIN-SUFFIX,siicenv-wuhan.com
   - DOMAIN-SUFFIX,siicfl.com
+  - DOMAIN-SUFFIX,siicshc.com
   - DOMAIN-SUFFIX,siilu.com
   - DOMAIN-SUFFIX,siixu.com
   - DOMAIN-SUFFIX,sijiaomao.com
@@ -87774,6 +87775,7 @@ payload:
   - DOMAIN-SUFFIX,zuizhifu.com
   - DOMAIN-SUFFIX,zuji360.com
   - DOMAIN-SUFFIX,zujuan.com
+  - DOMAIN-SUFFIX,zujuanku.com
   - DOMAIN-SUFFIX,zujuanyi.com
   - DOMAIN-SUFFIX,zuk.com
   - DOMAIN-SUFFIX,zukang88.com
