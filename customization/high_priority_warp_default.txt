@@ -2,4 +2,5 @@
 # ADD
 DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,captcha-delivery.com
 # REMOVE
