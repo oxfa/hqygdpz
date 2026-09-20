@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com
   - DOMAIN-SUFFIX,npmjs.com
   - DOMAIN-SUFFIX,npmjs.org
+  - DOMAIN-SUFFIX,captcha-delivery.com

@@ -8,3 +8,4 @@ DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net
 DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com
 DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,captcha-delivery.com
