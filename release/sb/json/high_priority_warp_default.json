@@ -2,17 +2,17 @@
   "rules": [
     {
       "domain_suffix": [
-        ".reddituploads.com.cdn-cf.behance.net",
         ".reddit.com",
-        ".redd.it",
-        ".redditmail.com",
         ".reddituploads.com",
+        ".reddituploads.com.cdn-cf.behance.net",
         ".redditmedia.com",
-        ".redditstatic.com",
-        ".reddituploads.com.cdn-cf.dropbox.com",
-        ".captcha-delivery.com",
+        ".npmjs.org",
+        ".redd.it",
         ".npmjs.com",
-        ".npmjs.org"
+        ".reddituploads.com.cdn-cf.dropbox.com",
+        ".redditmail.com",
+        ".redditstatic.com",
+        ".captcha-delivery.com"
       ]
     }
   ],

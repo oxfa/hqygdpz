@@ -2,22 +2,22 @@
   "rules": [
     {
       "domain": [
-        "fp-us-tmobile.rcs.telephony.goog",
-        "tmobilees.mpeasylink.com"
+        "tmobilees.mpeasylink.com",
+        "fp-us-tmobile.rcs.telephony.goog"
       ],
       "domain_suffix": [
-        ".mcc315.pub.3gppnetwork.org",
-        ".mcc313.pub.3gppnetwork.org",
         ".mcc314.pub.3gppnetwork.org",
-        ".tmobile.com",
         ".mcc316.pub.3gppnetwork.org",
-        ".t-mobile.net",
-        ".t-esim.us",
-        ".t-mobile.com",
+        ".voicestream.net",
         ".mcc311.pub.3gppnetwork.org",
-        ".mcc312.pub.3gppnetwork.org",
         ".mcc310.pub.3gppnetwork.org",
-        ".voicestream.net"
+        ".tmobile.com",
+        ".mcc315.pub.3gppnetwork.org",
+        ".t-mobile.com",
+        ".t-esim.us",
+        ".t-mobile.net",
+        ".mcc313.pub.3gppnetwork.org",
+        ".mcc312.pub.3gppnetwork.org"
       ]
     }
   ],
