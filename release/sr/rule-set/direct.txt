@@ -99477,6 +99477,7 @@ IP-CIDR,64.188.44.0/23,no-resolve
 IP-CIDR,64.235.227.160/29,no-resolve
 IP-CIDR,64.235.230.152/30,no-resolve
 IP-CIDR,64.71.138.0/25,no-resolve
+IP-CIDR,64.96.5.0/24,no-resolve
 IP-CIDR,64:ff9b:1::/48,no-resolve
 IP-CIDR,65.111.0.0/19,no-resolve
 IP-CIDR,65.55.60.184/30,no-resolve

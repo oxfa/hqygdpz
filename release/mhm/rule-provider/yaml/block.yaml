@@ -6499,6 +6499,7 @@ payload:
   - DOMAIN-SUFFIX,ads.travelaudience.com
   - DOMAIN-SUFFIX,ads.tripod.lycos.co.uk
   - DOMAIN-SUFFIX,ads.tripod.lycos.es
+  - DOMAIN-SUFFIX,ads.tripod.lycos.nl
   - DOMAIN-SUFFIX,ads.ttv.com.tw
   - DOMAIN-SUFFIX,ads.tvb.com
   - DOMAIN-SUFFIX,ads.tvp.pl
@@ -22730,6 +22731,7 @@ payload:
   - DOMAIN-SUFFIX,deeplinkuat.upoker.net
   - DOMAIN-SUFFIX,deepmetrix.com
   - DOMAIN-SUFFIX,deepretainer.com
+  - DOMAIN-SUFFIX,deeptack.com
   - DOMAIN-SUFFIX,deerbeginner.com
   - DOMAIN-SUFFIX,deerpreheat.com
   - DOMAIN-SUFFIX,def.bayer04.de
@@ -27138,6 +27140,7 @@ payload:
   - DOMAIN-SUFFIX,elqtrk.intel.pl
   - DOMAIN-SUFFIX,elqtrk.intel.ru
   - DOMAIN-SUFFIX,elqtrk.intel.sg
+  - DOMAIN-SUFFIX,elqtrk.intelrealsense.com
   - DOMAIN-SUFFIX,elqtrk.morningstar.be
   - DOMAIN-SUFFIX,elqtrk.morningstar.ch
   - DOMAIN-SUFFIX,elqtrk.morningstar.com
@@ -76844,6 +76847,7 @@ payload:
   - DOMAIN-SUFFIX,sync.audtd.com
   - DOMAIN-SUFFIX,sync.mobojoy.baidu.com
   - DOMAIN-SUFFIX,sync.shinobi.jp
+  - DOMAIN-SUFFIX,sync.tv
   - DOMAIN-SUFFIX,sync2.audtd.com
   - DOMAIN-SUFFIX,synccache.com
   - DOMAIN-SUFFIX,synccora.com
@@ -84953,6 +84957,7 @@ payload:
   - DOMAIN-SUFFIX,userlook.com
   - DOMAIN-SUFFIX,usermaven.com
   - DOMAIN-SUFFIX,userneeds.dk
+  - DOMAIN-SUFFIX,userreplay.net
   - DOMAIN-SUFFIX,userreport.com
   - DOMAIN-SUFFIX,users-api.com
   - DOMAIN-SUFFIX,users.rentbabe.com
@@ -87107,7 +87112,6 @@ payload:
   - DOMAIN-SUFFIX,vtuzzlfmnpxdq.website
   - DOMAIN-SUFFIX,vtwqzbrohcgdt.online
   - DOMAIN-SUFFIX,vtx2r60nuf.com
-  - DOMAIN-SUFFIX,vtxpmfvvqygyc.space
   - DOMAIN-SUFFIX,vtzmfhdyaemzg.online
   - DOMAIN-SUFFIX,vubmzx.com
   - DOMAIN-SUFFIX,vucxfzsavoxdd.online
@@ -87152,7 +87156,6 @@ payload:
   - DOMAIN-SUFFIX,vvabjoqkeklrl.top
   - DOMAIN-SUFFIX,vvaervdbcntvs.online
   - DOMAIN-SUFFIX,vvautxavycmwh.space
-  - DOMAIN-SUFFIX,vvcmxutvsgpux.space
   - DOMAIN-SUFFIX,vvcszpzpuceps.space
   - DOMAIN-SUFFIX,vvehqrcfdvaqm.website
   - DOMAIN-SUFFIX,vvewkblqoyjyq.top
@@ -91191,7 +91194,6 @@ payload:
   - DOMAIN-SUFFIX,xzshonsscrjzu.online
   - DOMAIN-SUFFIX,xzswn87hm.com
   - DOMAIN-SUFFIX,xztqfj.dreamvs.jp
-  - DOMAIN-SUFFIX,xzudsnhaguatg.space
   - DOMAIN-SUFFIX,xzutow.affordablelamps.com
   - DOMAIN-SUFFIX,xzv5vu7wl.com
   - DOMAIN-SUFFIX,xzwcng.vans.com.au
@@ -91342,7 +91344,6 @@ payload:
   - DOMAIN-SUFFIX,ybmmejnmkflmw.site
   - DOMAIN-SUFFIX,ybmulvsbb.com
   - DOMAIN-SUFFIX,ybnquhcbojngd.space
-  - DOMAIN-SUFFIX,yboqifbcgqgoa.space
   - DOMAIN-SUFFIX,ybotvisit.com
   - DOMAIN-SUFFIX,ybozjqsojrktu.online
   - DOMAIN-SUFFIX,ybp.yahoo.com
@@ -93669,7 +93670,6 @@ payload:
   - DOMAIN-SUFFIX,zypxlsrrellyr.site
   - DOMAIN-SUFFIX,zyq2.destinia.sk
   - DOMAIN-SUFFIX,zyqgwdrrrrrmm.online
-  - DOMAIN-SUFFIX,zyrijmtfflrww.website
   - DOMAIN-SUFFIX,zyrlyttzshqwr.space
   - DOMAIN-SUFFIX,zyvbcstcltidm.online
   - DOMAIN-SUFFIX,zyvbvqvwqomow.top
