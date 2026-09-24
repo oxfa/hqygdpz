@@ -3,8 +3,8 @@
     {
       "domain": [
         "time-ios.apple.com",
-        "mask.icloud.com",
         "time.apple.com",
+        "mask.icloud.com",
         "time-macos.apple.com"
       ]
     }
