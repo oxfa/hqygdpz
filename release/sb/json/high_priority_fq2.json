@@ -6,18 +6,18 @@
         "fp-us-tmobile.rcs.telephony.goog"
       ],
       "domain_suffix": [
-        ".t-mobile.com",
-        ".mcc311.pub.3gppnetwork.org",
-        ".mcc316.pub.3gppnetwork.org",
         ".mcc314.pub.3gppnetwork.org",
-        ".tmobile.com",
-        ".t-mobile.net",
-        ".mcc312.pub.3gppnetwork.org",
-        ".mcc313.pub.3gppnetwork.org",
+        ".t-esim.us",
         ".mcc315.pub.3gppnetwork.org",
+        ".mcc312.pub.3gppnetwork.org",
+        ".tmobile.com",
         ".voicestream.net",
-        ".mcc310.pub.3gppnetwork.org",
-        ".t-esim.us"
+        ".t-mobile.net",
+        ".t-mobile.com",
+        ".mcc316.pub.3gppnetwork.org",
+        ".mcc313.pub.3gppnetwork.org",
+        ".mcc311.pub.3gppnetwork.org",
+        ".mcc310.pub.3gppnetwork.org"
       ]
     }
   ],
