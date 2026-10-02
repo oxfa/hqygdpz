@@ -4,8 +4,8 @@
       "domain": [
         "time-ios.apple.com",
         "mask.icloud.com",
-        "time.apple.com",
-        "time-macos.apple.com"
+        "time-macos.apple.com",
+        "time.apple.com"
       ]
     }
   ],
