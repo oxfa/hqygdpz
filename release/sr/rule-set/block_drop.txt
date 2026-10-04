@@ -1589,7 +1589,6 @@ IP-CIDR,84.54.33.0/24,no-resolve
 IP-CIDR,85.11.167.0/24,no-resolve
 IP-CIDR,85.114.120.0/21,no-resolve
 IP-CIDR,85.121.4.0/24,no-resolve
-IP-CIDR,85.122.129.0/24,no-resolve
 IP-CIDR,85.158.149.0/24,no-resolve
 IP-CIDR,85.203.26.0/24,no-resolve
 IP-CIDR,85.203.46.0/24,no-resolve
