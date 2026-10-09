@@ -1476,6 +1476,7 @@ IP-CIDR,45.74.7.0/24,no-resolve
 IP-CIDR,45.80.158.0/24,no-resolve
 IP-CIDR,45.80.248.0/23,no-resolve
 IP-CIDR,45.80.37.0/24,no-resolve
+IP-CIDR,45.81.154.0/24,no-resolve
 IP-CIDR,45.83.28.0/24,no-resolve
 IP-CIDR,45.83.31.0/24,no-resolve
 IP-CIDR,45.87.249.0/24,no-resolve
