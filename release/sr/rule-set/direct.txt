@@ -28651,6 +28651,7 @@ DOMAIN-SUFFIX,gl-zj.com
 DOMAIN-SUFFIX,gl114.net
 DOMAIN-SUFFIX,gl170.com
 DOMAIN-SUFFIX,gl17u.com
+DOMAIN-SUFFIX,gl18.com
 DOMAIN-SUFFIX,gl258.com
 DOMAIN-SUFFIX,gl2mt.com
 DOMAIN-SUFFIX,glab.online
@@ -83366,6 +83367,7 @@ DOMAIN-SUFFIX,ytdcloud.com
 DOMAIN-SUFFIX,yte1.com
 DOMAIN-SUFFIX,ytedi.com
 DOMAIN-SUFFIX,yteng.net
+DOMAIN-SUFFIX,ytesting.com
 DOMAIN-SUFFIX,ytf8888.com
 DOMAIN-SUFFIX,ytfcjy.com
 DOMAIN-SUFFIX,ytg666.com
@@ -98865,7 +98867,11 @@ IP-CIDR,2a0a:d684::/32,no-resolve
 IP-CIDR,2a0a:d685:1000::/36,no-resolve
 IP-CIDR,2a0a:d685:100::/41,no-resolve
 IP-CIDR,2a0a:d685:180::/42,no-resolve
-IP-CIDR,2a0a:d685:1c0::/43,no-resolve
+IP-CIDR,2a0a:d685:1c0::/44,no-resolve
+IP-CIDR,2a0a:d685:1d1::/48,no-resolve
+IP-CIDR,2a0a:d685:1d2::/47,no-resolve
+IP-CIDR,2a0a:d685:1d4::/46,no-resolve
+IP-CIDR,2a0a:d685:1d8::/45,no-resolve
 IP-CIDR,2a0a:d685:1e2::/47,no-resolve
 IP-CIDR,2a0a:d685:1e4::/46,no-resolve
 IP-CIDR,2a0a:d685:1e8::/45,no-resolve
@@ -99109,7 +99115,6 @@ IP-CIDR,38.181.36.0/22,no-resolve
 IP-CIDR,38.181.40.0/21,no-resolve
 IP-CIDR,38.181.48.0/20,no-resolve
 IP-CIDR,38.196.176.0/24,no-resolve
-IP-CIDR,38.226.199.0/24,no-resolve
 IP-CIDR,38.47.192.0/20,no-resolve
 IP-CIDR,38.47.208.0/21,no-resolve
 IP-CIDR,38.47.216.0/22,no-resolve
