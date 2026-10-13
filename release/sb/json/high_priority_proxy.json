@@ -5,17 +5,17 @@
         "nic.eu.org"
       ],
       "domain_suffix": [
-        ".blzprofile.akamaized.net",
         ".ipqualityscore.com",
         ".blz-contentstack-assets.akamaized.net",
-        ".blz-contentstack-images.akamaized.net",
-        ".blizzard.com",
+        ".debian.org",
+        ".momot.rs",
         ".booksdl.lc",
+        ".blizzard.com",
         ".d9qcypg7o58bv.cloudfront.net",
         ".libgen.li",
-        ".debian.org",
         ".battle.net",
-        ".momot.rs"
+        ".blzprofile.akamaized.net",
+        ".blz-contentstack-images.akamaized.net"
       ]
     }
   ],

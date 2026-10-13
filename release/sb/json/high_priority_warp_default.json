@@ -4,12 +4,12 @@
       "domain_suffix": [
         ".redditstatic.com",
         ".reddit.com",
-        ".redd.it",
         ".redditmail.com",
-        ".redditmedia.com",
-        ".reddituploads.com.cdn-cf.behance.net",
+        ".reddituploads.com.cdn-cf.dropbox.com",
         ".reddituploads.com",
-        ".reddituploads.com.cdn-cf.dropbox.com"
+        ".reddituploads.com.cdn-cf.behance.net",
+        ".redd.it",
+        ".redditmedia.com"
       ]
     }
   ],
