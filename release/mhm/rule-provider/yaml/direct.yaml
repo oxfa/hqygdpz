@@ -13849,6 +13849,7 @@ payload:
   - DOMAIN-SUFFIX,cdn-cba.com
   - DOMAIN-SUFFIX,cdn-hotels.com
   - DOMAIN-SUFFIX,cdn-speed.com
+  - DOMAIN-SUFFIX,cdn.fun
   - DOMAIN-SUFFIX,cdn.me
   - DOMAIN-SUFFIX,cdn.show
   - DOMAIN-SUFFIX,cdn.vin
@@ -31841,6 +31842,7 @@ payload:
   - DOMAIN-SUFFIX,gystc.com
   - DOMAIN-SUFFIX,gytxnc.com
   - DOMAIN-SUFFIX,gytzkg.com
+  - DOMAIN-SUFFIX,gyurt.com
   - DOMAIN-SUFFIX,gywxedu.com
   - DOMAIN-SUFFIX,gywygl.com
   - DOMAIN-SUFFIX,gyxdkjdl.com
@@ -50700,6 +50702,7 @@ payload:
   - DOMAIN-SUFFIX,menglegame.com
   - DOMAIN-SUFFIX,menglu.com
   - DOMAIN-SUFFIX,mengmei.org
+  - DOMAIN-SUFFIX,mengniuarla.com
   - DOMAIN-SUFFIX,mengqingpo.com
   - DOMAIN-SUFFIX,mengqiuju.com
   - DOMAIN-SUFFIX,mengsang.com
@@ -54837,6 +54840,7 @@ payload:
   - DOMAIN-SUFFIX,nuoder.com
   - DOMAIN-SUFFIX,nuoerchina.com
   - DOMAIN-SUFFIX,nuofanpay.com
+  - DOMAIN-SUFFIX,nuoguangsh.com
   - DOMAIN-SUFFIX,nuohotel.com
   - DOMAIN-SUFFIX,nuoji.com
   - DOMAIN-SUFFIX,nuoke147.com
@@ -78046,6 +78050,7 @@ payload:
   - DOMAIN-SUFFIX,xiaoqiqiao.com
   - DOMAIN-SUFFIX,xiaoqiumi.co
   - DOMAIN-SUFFIX,xiaoqiumi.com
+  - DOMAIN-SUFFIX,xiaoquba.com
   - DOMAIN-SUFFIX,xiaoqueshe.com
   - DOMAIN-SUFFIX,xiaoquyijia.com
   - DOMAIN-SUFFIX,xiaorizi.me
@@ -80195,6 +80200,7 @@ payload:
   - DOMAIN-SUFFIX,xzairport.com
   - DOMAIN-SUFFIX,xzaz.com
   - DOMAIN-SUFFIX,xzb360.com
+  - DOMAIN-SUFFIX,xzbaorun.com
   - DOMAIN-SUFFIX,xzbco.com
   - DOMAIN-SUFFIX,xzbhfk.com
   - DOMAIN-SUFFIX,xzbzq.com
@@ -87047,6 +87053,7 @@ payload:
   - DOMAIN-SUFFIX,zjwanma.com
   - DOMAIN-SUFFIX,zjwater.com
   - DOMAIN-SUFFIX,zjwater.org
+  - DOMAIN-SUFFIX,zjwcjm.com
   - DOMAIN-SUFFIX,zjwebapp.com
   - DOMAIN-SUFFIX,zjwentou.com
   - DOMAIN-SUFFIX,zjwfgroup.com
