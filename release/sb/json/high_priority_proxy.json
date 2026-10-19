@@ -7,14 +7,14 @@
       "domain_suffix": [
         ".booksdl.lc",
         ".libgen.li",
-        ".ipqualityscore.com",
-        ".blzprofile.akamaized.net",
-        ".battle.net",
-        ".blz-contentstack-assets.akamaized.net",
-        ".debian.org",
         ".d9qcypg7o58bv.cloudfront.net",
         ".blizzard.com",
+        ".battle.net",
+        ".blz-contentstack-assets.akamaized.net",
         ".blz-contentstack-images.akamaized.net",
+        ".ipqualityscore.com",
+        ".debian.org",
+        ".blzprofile.akamaized.net",
         ".momot.rs"
       ]
     }
