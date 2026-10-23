@@ -8284,7 +8284,6 @@ DOMAIN-SUFFIX,apkevery.com
 DOMAIN-SUFFIX,apkplug.com
 DOMAIN-SUFFIX,apkrj.com
 DOMAIN-SUFFIX,apkxz.com
-DOMAIN-SUFFIX,apkyx.com
 DOMAIN-SUFFIX,apkzu.com
 DOMAIN-SUFFIX,aplaybox.com
 DOMAIN-SUFFIX,aplnk.com
@@ -13822,6 +13821,7 @@ DOMAIN-SUFFIX,cdn-build.net
 DOMAIN-SUFFIX,cdn-cba.com
 DOMAIN-SUFFIX,cdn-hotels.com
 DOMAIN-SUFFIX,cdn-speed.com
+DOMAIN-SUFFIX,cdn.fun
 DOMAIN-SUFFIX,cdn.me
 DOMAIN-SUFFIX,cdn.show
 DOMAIN-SUFFIX,cdn.vin
