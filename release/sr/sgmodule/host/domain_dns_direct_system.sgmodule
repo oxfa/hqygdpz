@@ -8283,6 +8283,7 @@ stun.voipstunt.com = server:system
 *.apkplug.com = server:system
 *.apkrj.com = server:system
 *.apkxz.com = server:system
+*.apkyx.com = server:system
 *.apkzu.com = server:system
 *.aplaybox.com = server:system
 *.aplnk.com = server:system

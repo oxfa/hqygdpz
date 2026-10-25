@@ -8283,6 +8283,7 @@ stun.voipstunt.com = server:tls://223.5.5.5
 *.apkplug.com = server:tls://223.5.5.5
 *.apkrj.com = server:tls://223.5.5.5
 *.apkxz.com = server:tls://223.5.5.5
+*.apkyx.com = server:tls://223.5.5.5
 *.apkzu.com = server:tls://223.5.5.5
 *.aplaybox.com = server:tls://223.5.5.5
 *.aplnk.com = server:tls://223.5.5.5
