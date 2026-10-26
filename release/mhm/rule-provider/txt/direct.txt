@@ -86819,6 +86819,7 @@ DOMAIN-SUFFIX,zjwandi.com
 DOMAIN-SUFFIX,zjwanma.com
 DOMAIN-SUFFIX,zjwater.com
 DOMAIN-SUFFIX,zjwater.org
+DOMAIN-SUFFIX,zjwcjm.com
 DOMAIN-SUFFIX,zjwebapp.com
 DOMAIN-SUFFIX,zjwentou.com
 DOMAIN-SUFFIX,zjwfgroup.com
@@ -87133,6 +87134,7 @@ DOMAIN-SUFFIX,znjttz.com
 DOMAIN-SUFFIX,znlerp.com
 DOMAIN-SUFFIX,znlh.com
 DOMAIN-SUFFIX,znmq.com
+DOMAIN-SUFFIX,znnu.com
 DOMAIN-SUFFIX,znonline.net
 DOMAIN-SUFFIX,znp9.com
 DOMAIN-SUFFIX,znrfwy.com
@@ -88968,6 +88970,7 @@ IP-CIDR,103.186.228.0/23,no-resolve
 IP-CIDR,103.186.4.0/23,no-resolve
 IP-CIDR,103.189.140.0/23,no-resolve
 IP-CIDR,103.189.152.0/22,no-resolve
+IP-CIDR,103.189.197.0/24,no-resolve
 IP-CIDR,103.189.92.0/23,no-resolve
 IP-CIDR,103.19.12.0/22,no-resolve
 IP-CIDR,103.19.232.0/22,no-resolve
