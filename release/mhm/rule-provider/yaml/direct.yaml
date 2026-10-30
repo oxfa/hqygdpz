@@ -13813,7 +13813,6 @@ payload:
   - DOMAIN-SUFFIX,cdn-cba.com
   - DOMAIN-SUFFIX,cdn-hotels.com
   - DOMAIN-SUFFIX,cdn-speed.com
-  - DOMAIN-SUFFIX,cdn.fun
   - DOMAIN-SUFFIX,cdn.me
   - DOMAIN-SUFFIX,cdn.show
   - DOMAIN-SUFFIX,cdn.vin
@@ -39889,6 +39888,7 @@ payload:
   - DOMAIN-SUFFIX,issks.com
   - DOMAIN-SUFFIX,istarshine.com
   - DOMAIN-SUFFIX,istcw.com
+  - DOMAIN-SUFFIX,istpei.com
   - DOMAIN-SUFFIX,istrongcloud.com
   - DOMAIN-SUFFIX,istrongcloud.net
   - DOMAIN-SUFFIX,isuanyun.com
