@@ -983,8 +983,6 @@ payload:
   - IP-CIDR,203.26.150.0/24,no-resolve
   - IP-CIDR,203.9.0.0/19,no-resolve
   - IP-CIDR,203.91.73.0/24,no-resolve
-  - IP-CIDR,204.106.128.0/18,no-resolve
-  - IP-CIDR,204.106.192.0/19,no-resolve
   - IP-CIDR,204.107.132.0/24,no-resolve
   - IP-CIDR,204.107.208.0/24,no-resolve
   - IP-CIDR,204.110.144.0/20,no-resolve
