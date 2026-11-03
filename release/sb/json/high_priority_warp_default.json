@@ -2,15 +2,15 @@
   "rules": [
     {
       "domain_suffix": [
-        ".redditmail.com",
-        ".redditstatic.com",
         ".reddituploads.com.cdn-cf.dropbox.com",
+        ".redditmail.com",
         ".redd.it",
-        ".reddit.com",
         ".reddituploads.com",
-        ".steamdb.info",
         ".reddituploads.com.cdn-cf.behance.net",
-        ".redditmedia.com"
+        ".reddit.com",
+        ".redditmedia.com",
+        ".steamdb.info",
+        ".redditstatic.com"
       ]
     }
   ],
