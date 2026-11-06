@@ -6,14 +6,14 @@
       ],
       "domain_suffix": [
         ".libgen.li",
+        ".blizzard.com",
+        ".duck.ai",
+        ".blzprofile.akamaized.net",
+        ".booksdl.lc",
+        ".momot.rs",
+        ".battle.net",
         ".blz-contentstack-images.akamaized.net",
         ".d9qcypg7o58bv.cloudfront.net",
-        ".blizzard.com",
-        ".blzprofile.akamaized.net",
-        ".momot.rs",
-        ".booksdl.lc",
-        ".duck.ai",
-        ".battle.net",
         ".blz-contentstack-assets.akamaized.net",
         ".debian.org"
       ]

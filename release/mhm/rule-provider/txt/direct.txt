@@ -8411,6 +8411,7 @@ DOMAIN-SUFFIX,aqjz.net
 DOMAIN-SUFFIX,aqlife.com
 DOMAIN-SUFFIX,aqniu.com
 DOMAIN-SUFFIX,aqpta.com
+DOMAIN-SUFFIX,aqqsgh.com
 DOMAIN-SUFFIX,aqrose.com
 DOMAIN-SUFFIX,aqsc.org
 DOMAIN-SUFFIX,aqsiqauto.com
@@ -20292,7 +20293,6 @@ DOMAIN-SUFFIX,dashiyou.com
 DOMAIN-SUFFIX,dashu.com
 DOMAIN-SUFFIX,dashubaba.com
 DOMAIN-SUFFIX,dashuju123.com
-DOMAIN-SUFFIX,dasiotravel.com
 DOMAIN-SUFFIX,dasiyingyu.com
 DOMAIN-SUFFIX,dasong108.com
 DOMAIN-SUFFIX,dasoujia.com
@@ -22298,7 +22298,6 @@ DOMAIN-SUFFIX,dptech.com
 DOMAIN-SUFFIX,dptechnology.net
 DOMAIN-SUFFIX,dptel.com
 DOMAIN-SUFFIX,dpurat.com
-DOMAIN-SUFFIX,dpweixin.com
 DOMAIN-SUFFIX,dpwl.net
 DOMAIN-SUFFIX,dpxkjw.com
 DOMAIN-SUFFIX,dpxq.com
