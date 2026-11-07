@@ -6347,6 +6347,7 @@ DOMAIN-SUFFIX,admai.com
 DOMAIN-SUFFIX,admaimai.com
 DOMAIN-SUFFIX,admama.com
 DOMAIN-SUFFIX,admamax.com
+DOMAIN-SUFFIX,admin04.com
 DOMAIN-SUFFIX,admin10000.com
 DOMAIN-SUFFIX,admin345.com
 DOMAIN-SUFFIX,admin5.com
@@ -13856,7 +13857,6 @@ DOMAIN-SUFFIX,cdn-build.net
 DOMAIN-SUFFIX,cdn-cba.com
 DOMAIN-SUFFIX,cdn-hotels.com
 DOMAIN-SUFFIX,cdn-speed.com
-DOMAIN-SUFFIX,cdn.fun
 DOMAIN-SUFFIX,cdn.me
 DOMAIN-SUFFIX,cdn.show
 DOMAIN-SUFFIX,cdn.vin
@@ -72854,6 +72854,7 @@ DOMAIN-SUFFIX,v6c.cc
 DOMAIN-SUFFIX,v6eq34ykhek5.com
 DOMAIN-SUFFIX,v6lvs.com
 DOMAIN-SUFFIX,v78q.com
+DOMAIN-SUFFIX,v8gb.com
 DOMAIN-SUFFIX,v9b5n91.com
 DOMAIN-SUFFIX,vaakwe.com
 DOMAIN-SUFFIX,vaatn.com
@@ -87165,6 +87166,7 @@ DOMAIN-SUFFIX,zjwandi.com
 DOMAIN-SUFFIX,zjwanma.com
 DOMAIN-SUFFIX,zjwater.com
 DOMAIN-SUFFIX,zjwater.org
+DOMAIN-SUFFIX,zjwcjm.com
 DOMAIN-SUFFIX,zjwebapp.com
 DOMAIN-SUFFIX,zjwentou.com
 DOMAIN-SUFFIX,zjwfgroup.com
