@@ -4146,6 +4146,7 @@ DOMAIN-SUFFIX,58hua.com
 DOMAIN-SUFFIX,58iclick.com
 DOMAIN-SUFFIX,58insure.com
 DOMAIN-SUFFIX,58iwan.com
+DOMAIN-SUFFIX,58izl.com
 DOMAIN-SUFFIX,58jb.com
 DOMAIN-SUFFIX,58jmw.com
 DOMAIN-SUFFIX,58kad.com
@@ -47305,6 +47306,7 @@ DOMAIN-SUFFIX,lgxly.com
 DOMAIN-SUFFIX,lgyanglao.com
 DOMAIN-SUFFIX,lgyszl.com
 DOMAIN-SUFFIX,lgyudiao.com
+DOMAIN-SUFFIX,lgyzyy.com
 DOMAIN-SUFFIX,lgzowo.com
 DOMAIN-SUFFIX,lgzzu.com
 DOMAIN-SUFFIX,lh-ep.com
@@ -67680,7 +67682,6 @@ DOMAIN-SUFFIX,sysush.com
 DOMAIN-SUFFIX,syswgw.com
 DOMAIN-SUFFIX,sysx.tech
 DOMAIN-SUFFIX,sysxhz.com
-DOMAIN-SUFFIX,sysy.fun
 DOMAIN-SUFFIX,sysydz.net
 DOMAIN-SUFFIX,syt1000.com
 DOMAIN-SUFFIX,sytfgroup.com
@@ -87270,7 +87271,6 @@ DOMAIN-SUFFIX,zjwandi.com
 DOMAIN-SUFFIX,zjwanma.com
 DOMAIN-SUFFIX,zjwater.com
 DOMAIN-SUFFIX,zjwater.org
-DOMAIN-SUFFIX,zjwcjm.com
 DOMAIN-SUFFIX,zjwebapp.com
 DOMAIN-SUFFIX,zjwentou.com
 DOMAIN-SUFFIX,zjwfgroup.com
