@@ -3,14 +3,14 @@
     {
       "domain_suffix": [
         ".reddituploads.com",
-        ".steamdb.info",
-        ".reddituploads.com.cdn-cf.dropbox.com",
         ".redditmedia.com",
-        ".reddit.com",
         ".redd.it",
-        ".redditstatic.com",
+        ".steamdb.info",
+        ".reddituploads.com.cdn-cf.behance.net",
         ".redditmail.com",
-        ".reddituploads.com.cdn-cf.behance.net"
+        ".reddit.com",
+        ".reddituploads.com.cdn-cf.dropbox.com",
+        ".redditstatic.com"
       ]
     }
   ],
