@@ -6505,6 +6505,7 @@ payload:
   - DOMAIN-SUFFIX,afxhw.com
   - DOMAIN-SUFFIX,afzhan.com
   - DOMAIN-SUFFIX,ag03.com
+  - DOMAIN-SUFFIX,ag8.com
   - DOMAIN-SUFFIX,agcen.com
   - DOMAIN-SUFFIX,agcloudcs.com
   - DOMAIN-SUFFIX,agconnect.link
@@ -7177,6 +7178,7 @@ payload:
   - DOMAIN-SUFFIX,aixinmusic.com
   - DOMAIN-SUFFIX,aixinwechat.com
   - DOMAIN-SUFFIX,aixiuyingyu.com
+  - DOMAIN-SUFFIX,aixq.cc
   - DOMAIN-SUFFIX,aixuangu.cloud
   - DOMAIN-SUFFIX,aixue.net
   - DOMAIN-SUFFIX,aixuebanban.com
@@ -35750,7 +35752,6 @@ payload:
   - DOMAIN-SUFFIX,hongyanliren.com
   - DOMAIN-SUFFIX,hongyans.com
   - DOMAIN-SUFFIX,hongyantruck.com
-  - DOMAIN-SUFFIX,hongyanyanbaihuo.online
   - DOMAIN-SUFFIX,hongyaomall.com
   - DOMAIN-SUFFIX,hongyawang.com
   - DOMAIN-SUFFIX,hongyejixie.com
@@ -40700,6 +40701,7 @@ payload:
   - DOMAIN-SUFFIX,jddaojia.shop
   - DOMAIN-SUFFIX,jddapeigou.com
   - DOMAIN-SUFFIX,jdddata.com
+  - DOMAIN-SUFFIX,jddebug.com
   - DOMAIN-SUFFIX,jddglobal.com
   - DOMAIN-SUFFIX,jddj.com
   - DOMAIN-SUFFIX,jddmoto.com
@@ -44283,6 +44285,7 @@ payload:
   - DOMAIN-SUFFIX,k5n.com
   - DOMAIN-SUFFIX,k73.com
   - DOMAIN-SUFFIX,k780.com
+  - DOMAIN-SUFFIX,k8.com
   - DOMAIN-SUFFIX,k8008.com
   - DOMAIN-SUFFIX,k8k8k8.com
   - DOMAIN-SUFFIX,k8ser.com
@@ -59492,6 +59495,7 @@ payload:
   - DOMAIN-SUFFIX,qutingting.com
   - DOMAIN-SUFFIX,qutoutiao.net
   - DOMAIN-SUFFIX,qutu.com
+  - DOMAIN-SUFFIX,qutuancan.com
   - DOMAIN-SUFFIX,qutuiwa.com
   - DOMAIN-SUFFIX,qutuly.com
   - DOMAIN-SUFFIX,quumii.com
@@ -60630,7 +60634,6 @@ payload:
   - DOMAIN-SUFFIX,rosepie.com
   - DOMAIN-SUFFIX,rosewin.com
   - DOMAIN-SUFFIX,rosin-china.com
-  - DOMAIN-SUFFIX,rosirs-edu.com
   - DOMAIN-SUFFIX,rosnas.com
   - DOMAIN-SUFFIX,rossoarts.com
   - DOMAIN-SUFFIX,rossoarts.net
