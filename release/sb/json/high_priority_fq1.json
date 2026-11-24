@@ -2,8 +2,8 @@
   "rules": [
     {
       "domain_suffix": [
-        ".mcc440.pub.3gppnetwork.org",
-        ".mcc441.pub.3gppnetwork.org"
+        ".mcc441.pub.3gppnetwork.org",
+        ".mcc440.pub.3gppnetwork.org"
       ]
     }
   ],
