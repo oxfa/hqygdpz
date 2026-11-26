@@ -7,15 +7,15 @@
       "domain_suffix": [
         ".battle.net",
         ".ipqualityscore.com",
-        ".blizzard.com",
+        ".d9qcypg7o58bv.cloudfront.net",
+        ".booksdl.lc",
         ".libgen.li",
         ".blz-contentstack-images.akamaized.net",
         ".blz-contentstack-assets.akamaized.net",
-        ".booksdl.lc",
-        ".momot.rs",
-        ".blzprofile.akamaized.net",
+        ".blizzard.com",
         ".debian.org",
-        ".d9qcypg7o58bv.cloudfront.net"
+        ".blzprofile.akamaized.net",
+        ".momot.rs"
       ]
     }
   ],
